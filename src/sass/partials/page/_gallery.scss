@@ -1,0 +1,115 @@
+﻿@import "../../modules/_base.scss";
+/*Gallery*/
+.b-gallery{
+    @extend .g-clearlist;
+    @extend .g-clearfix;
+}
+
+.b-gallery__item{
+    @extend .g-column;
+
+    @include media($small){
+        @include span-columns(6);
+        @include omega(2n);
+    }
+
+    @include media($tablet){
+        @include omega-reset(2n);
+        @include span-columns(4);
+        @include omega(3n);
+    }
+
+    @include media($desktop){
+        @include omega-reset(3n);
+        @include span-columns(3);
+        @include omega(4n);
+    }
+}
+
+.b-gallery__link{
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    position:relative;
+
+    &:after{
+        content:'\e91d';
+        font-family:'icomoon';
+        @extend .g-align;
+        font-size:rem(24px);
+        opacity:0;
+        @extend .g-transition;
+        transition-property:opacity;
+        z-index:3;
+    }
+
+    &:hover{
+        &:after{
+            opacity:1;
+        }
+        .b-gallery__inner{
+            &:after{
+                opacity:1;
+            }
+        }
+        .b-gallery__img{
+            transform:scale(1.05);
+        }
+        .b-gallery__entry{
+            transform:translateY(-60px);
+        }
+    }
+}
+.b-gallery__inner{
+    max-width:400px;
+    padding:0;
+    margin:0 auto $project-line-height;
+    position:relative;
+    overflow:hidden;
+
+    &:before{
+        content:'';
+        display:block;
+        padding-top:75%;
+    }
+
+    &:after{
+        content:'';
+        display:block;
+        position:absolute;
+        top:0; left:0; right:0; bottom:0;
+        background:rgba(#000, .4);
+        opacity:0;
+        @extend .g-transition;
+        transition-property:opacity;
+        z-index:2;
+    }
+}
+
+.b-gallery__img{
+    @extend .g-img-centered;
+    z-index:1;
+    @extend .g-transition;
+    transition-property:transform;
+    backface-visibility:hidden;
+}
+
+.b-gallery__entry{
+    width:100%;
+    padding:0 10px;
+    position:absolute;
+    height:50px;
+    line-height:50px;
+    white-space:nowrap;
+    text-align:center;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    box-sizing:border-box;
+    z-index:3;
+    bottom:-60px;
+    left:0;
+    background:$primary;
+    font-size:rem(14px);
+    @extend .g-transition;
+    transition-property:transform;
+}

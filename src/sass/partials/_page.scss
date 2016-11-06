@@ -73,16 +73,10 @@
         font-size:rem(18px);
         text-transform:uppercase;
         background:#fff;
-        color:$primary;
+        color:$primary !important;
 
         &:before{
             background:#f5f5f5;
-        }
-
-        &:hover,
-        &:focus,
-        &:active{
-            color:$primary;
         }
     }
 }
@@ -139,6 +133,7 @@
 @import "page/_slider.scss";
 @import "page/_panel.scss";
 @import "page/_partner.scss";
+@import "page/_gallery.scss";
 @import "page/_scroll-up.scss";
 
 

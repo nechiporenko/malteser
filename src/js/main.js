@@ -6,6 +6,7 @@
 //Мобильное меню
 //Кнопка скролла страницы
 //Hero Slider
+//Лайтбокс
 
 jQuery(document).ready(function ($) {
     $('html').removeClass('no-js').addClass('js');
@@ -348,5 +349,25 @@ jQuery(document).ready(function ($) {
     };
     if ($('.js-slider').length) {
         heroSlider();
+    };
+
+    //Лайтбокс
+    function initGallery() {
+        var $gallery = $('.js-gallery');
+        $gallery.each(function () {
+            $(this).find('a').simpleLightbox({
+                navText: ['<i class="icon-arrow-left"></i>', '<i class="icon-arrow-right"></i>'],
+                captions: true,
+                captionSelector: 'figcaption',
+                captionType: 'text',
+                close: true,
+                closeText: '<i class="icon-close"></i>',
+                showCounter: true,
+                disableScroll: false
+            });
+        });
+    };
+    if ($('.js-gallery').length) {
+        initGallery();
     }
 });
