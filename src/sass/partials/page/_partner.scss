@@ -1,0 +1,13 @@
+﻿@import "../../modules/_base.scss";
+/*Partners block*/
+.b-partner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.b-partner__link{
+    display:inline-block;
+    vertical-align:middle;
+    margin:$project-line-height $project-line-height/2;
+    text-decoration:none;
+}

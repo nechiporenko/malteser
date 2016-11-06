@@ -1,0 +1,127 @@
+﻿@import "../../modules/base";
+/** BX Slider **/
+
+$loader:   '../img/loader.gif';
+
+//layout
+.bx-wrapper {
+	position: relative;
+    margin:0 auto;
+	padding: 0;
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+}
+
+
+
+.bx-viewport {
+	//fix other elements on the page moving (on Chrome)
+	-webkit-transform: translatez(0);
+}
+
+// THEME
+.bx-pager,
+.bx-controls-auto {
+	position: absolute;
+    bottom: $project-line-height;
+	width: 100%;
+	z-index:60;
+}
+
+// LOADER
+.bx-loading {
+	min-height: 50px;
+	background: url($loader) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 200;
+}
+
+// PAGER
+.bx-pager {
+    text-align:center;
+	&.bx-default-pager a {
+		background: #fff;
+		@include hide-text;
+		display: block;
+		@include size(10px);
+		margin: 0 5px;
+		outline: 0;
+		border-radius: 50%;
+
+		&:hover,
+		&.active,
+		&:focus {
+			background: $primary;
+		}
+	}
+}
+.bx-pager-item,
+.bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+    vertical-align:middle;
+}
+.bx-pager-item {
+	font-size: 0;
+	line-height: 0;
+}
+
+// DIRECTION CONTROLS (NEXT / PREV)
+.bx-prev {
+	left: 0;
+    text-align:left;
+}
+.bx-next {
+	right: 0;
+    text-align:right;
+}
+.bx-controls-direction a {
+	position: absolute;
+	top: 50%;
+	margin-top: -$project-line-height;
+    @include size(2*$project-line-height);
+    line-height:2*$project-line-height;
+    font-size:rem(32px);
+    color:#fff;
+	z-index: 60;
+    opacity:.6;
+    box-sizing:border-box;
+	transition-property:opacity;
+	@extend .g-transition;
+    display:none;
+	
+
+    &:hover,
+    &:active{
+        opacity:1;
+    }
+
+    &.disabled {
+		opacity:.35;
+        cursor:default;
+	}
+
+    @include media($large){
+        display:block;
+    }
+}
+
+@include media(min-width 1248px){
+    .bx-prev{
+        left:10px;
+    }
+    .bx-next{
+        right:10px;
+    }
+}
+@include media($extra-large){
+    .bx-prev{
+        left:100px;
+    }
+    .bx-next{
+        right:100px;
+    }
+}

@@ -1,0 +1,31 @@
+@import "../../modules/base";
+/*Footer Main Part*/
+.b-footer__main{
+    @extend .g-container;
+}
+.b-footer__col{
+    @extend .g-column;
+    font-size:rem(15px);
+    line-height:1.4;
+
+    @include media($tablet){
+        @include span-columns(6);
+        @include omega(2n);
+    }
+
+    @include media($desktop){
+        @include omega-reset(2n);
+        @include span-columns(3);
+        @include omega(4n);
+    }
+}
+.b-footer__title{
+    @extend .g-title;
+    height:46px;
+    line-height:46px;
+    margin-bottom:15px;
+    white-space:nowrap;
+    font-size:rem(18px);
+    text-transform:uppercase;
+    color:#fff;
+}

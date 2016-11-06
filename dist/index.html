@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html class="no-js" lang="uk">
+<head>
+    <title>Malteser Home Page</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Page Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body class="page">
+    <!--HEADER-->
+    <header class="b-header">
+        <div class="b-header__top">
+            <div class="g-container">
+                <!--lang switcher-->  
+                <ul class="h-lang">
+                    <li class="h-lang__item h-lang__item--active">
+                        <a href="#" class="h-lang__link">Uk</a>
+                    </li>
+                    <li class="h-lang__item">
+                        <a href="#" class="h-lang__link">Pl</a>
+                    </li>
+                </ul>
+                <!--/lang switcher-->
+                <!--search form-->
+                <form class="h-search">
+                    <input type="text" name="s" id="s" class="h-search__input" placeholder="Шукати..." />
+                    <button type="submit" class="h-search__btn">
+                        <i class="icon-search"></i>
+                    </button>
+                </form>
+                <!--/search form-->
+                <!--header action list-->
+                <ul class="h-action">
+                    <li class="h-action__item">
+                        <a href="tel:+380502242414" class="h-action__link">
+                            <span class="h-action__icon">
+                                <i class="icon-phone"></i>
+                            </span>
+                            (050) 224-24-14
+                        </a>
+                    </li>
+                    <li class="h-action__item">
+                        <a href="#" class="h-action__link">
+                            <span class="h-action__icon">
+                                <i class="icon-heart"></i>
+                            </span>
+                            Замовити послуги
+                        </a>
+                    </li>
+                    <li class="h-action__item">
+                        <a href="#" class="h-action__link">
+                            <span class="h-action__icon">
+                                <i class="icon-donate"></i>
+                            </span>
+                            Допомогти
+                        </a>
+                    </li>
+                </ul>
+                <!--/header action list-->
+            </div>
+        </div>
+        <div class="b-header__main js-header">
+            <nav class="g-container">
+                <!--logo-->
+                <a href="index.html" class="h-logo">
+                    <figure class="h-logo__inner">
+                        <div class="h-logo__thumb"></div>
+                        <figcaption class="h-logo__entry">
+                            Мальтійська служба допомоги
+                            <span class="h-logo__city">м.Київ</span>
+                        </figcaption>
+                    </figure>
+                </a>
+                <!--/logo-->
+                <!--desktop menu-->
+                <ul class="h-menu js-menu">
+                    <li class="h-menu__item">
+                        <a href="about.html" class="h-menu__link">Про нас</a>
+                        <ul class="h-menu__sub-menu">
+                            <li class="h-menu__sub-menu__item">
+                                <a href="#" class="h-menu__sub-menu__link">МСД у Світі</a>
+                            </li>
+                            <li class="h-menu__sub-menu__item">
+                                <a href="#" class="h-menu__sub-menu__link">МСД в Україні</a>
+                            </li>
+                            <li class="h-menu__sub-menu__item">
+                                <a href="#" class="h-menu__sub-menu__link">Історія Мальтійського Ордену</a>
+                            </li>
+                            <li class="h-menu__sub-menu__item">
+                                <a href="gallery.html" class="h-menu__sub-menu__link">Фотогалерея</a>
+                            </li>
+                            <li class="h-menu__sub-menu__item">
+                                <a href="staff.html" class="h-menu__sub-menu__link">Команда</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="what-we-do.html" class="h-menu__link">Наша діяльність</a>
+                        <ul class="h-menu__sub-menu">
+                            <li class="h-menu__sub-menu__item">
+                                <a href="#" class="h-menu__sub-menu__link">Рятівництво</a>
+                            </li>
+                            <li class="h-menu__sub-menu__item">
+                                <a href="#" class="h-menu__sub-menu__link">Курси першої допомоги</a>
+                            </li>
+                            <li class="h-menu__sub-menu__item">
+                                <a href="#" class="h-menu__sub-menu__link">Допомога війсковим</a>
+                            </li>
+                            <li class="h-menu__sub-menu__item">
+                                <a href="#" class="h-menu__sub-menu__link">Благодійна кухня</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="actions.html" class="h-menu__link">Акції</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="news.html" class="h-menu__link">Новини</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="contacts.html" class="h-menu__link">Контакти</a>
+                    </li>
+                </ul>
+                <!--/desktop menu-->
+
+                <!--mobile menu switcher-->
+                <button type="button" class="b-header__mtoggl js-mtoggl">
+                    <i class="icon-menu"></i>
+                </button>
+                <!--/mobile menu switcher-->
+            </nav>
+        </div>
+    </header>
+    <!--/HEADER-->
+	<!--MAIN CONTENT-->
+    <main class="page__content">
+        <!--hero slider-->
+        <div class="b-hero">
+            <div class="b-hero__wrap">
+                <ul class="b-hero__list js-slider">
+                    <li class="b-hero__item">
+                        <figure class="b-hero__inner">
+                            <div class="b-hero__thumb" data-src="img/slider/slider01.jpg"></div>
+                            <figcaption class="b-hero__entry">
+                                <div class="g-container">
+                                    <div class="b-hero__content">
+                                        <span class="b-hero__title">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                        </span>
+                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>
+                                    </div>
+                                    <a href="#" class="g-btn g-btn--large">Читати далі <i class="icon-more"></i></a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="b-hero__item">
+                        <figure class="b-hero__inner">
+                            <div class="b-hero__thumb" data-src="img/slider/slider02.jpg"></div>
+                            <figcaption class="b-hero__entry">
+                                <div class="g-container">
+                                    <div class="b-hero__content">
+                                        <span class="b-hero__title">
+                                            Morbi in sem quis dui placerat ornare
+                                        </span>
+                                        <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                                    </div>
+                                    <a href="#" class="g-btn g-btn--large">Читати далі <i class="icon-more"></i></a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="b-hero__item">
+                        <figure class="b-hero__inner">
+                            <div class="b-hero__thumb" data-src="img/slider/slider03.jpg"></div>
+                            <figcaption class="b-hero__entry">
+                                <div class="g-container">
+                                    <div class="b-hero__content">
+                                        <span class="b-hero__title">
+                                            Donec eu libero sit amet quam egestas semper
+                                        </span>
+                                        <p>Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor</p>
+                                    </div>
+                                    <a href="#" class="g-btn g-btn--large">Читати далі <i class="icon-more"></i></a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+            <script>
+            (function () {
+                //добавим бэкграунд к первому слайду
+                var thumb = document.getElementsByClassName('b-hero__thumb')[0];
+                thumb.style.backgroundImage = 'url(' + thumb.getAttribute('data-src') + ')';
+                //подготовим первый слайд к анимации текстового контента
+                var el = document.getElementsByClassName('b-hero__content')[0],
+                    className = 'js-animate';
+                if (el.classList) {
+                    el.classList.add(className);
+                } else {
+                    el.className += ' ' + className;
+                }
+            })();
+            </script>
+        </div>
+        <!--/hero slider-->
+
+        <section class="page__section">
+            <div class="g-container">
+                <h1 class="g-title g-title--alt">МСД у м.Києві</h1>
+                <div class="page__inner">
+                    <p>Мальтійська служба допомоги розпочала свою роботу у Києві в грудні 1990 р. в рамках зимової гуманітарної допомоги з Німеччини, а 10 вересня 1998 р. за ініціативи Суверенного Мальтійського лицарського ордену та Німецької Мальтійської служби допомоги було зареєстровано «Членську благодійну організацію Мальтійська служба допомоги м. Києва».</p>
+                    <a href="#" class="g-btn g-btn--large">Дізнатися більше <i class="icon-more"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="page__section">
+            <div class="g-container">
+                <h2 class="g-title g-title--alt">Що ми робимо?</h2>
+                <div class="g-row">
+                    <div class="g-col g-col--one-fourth">
+                        <figure class="b-panel b-panel--has-icon">
+                            <div class="b-panel__icon">
+                                <svg class="b-panel__svg" viewBox="0 0 238 238" width="70" version="1.1">
+                                    <path class="st1" d="M153.074 104.384l-23.74 61.013-21.61-30.64-12.705 16.606-23.97-39.62-12.946 29.68H0v17h50.607c23.858 24.93 57.768 51.348 59.365 52.587l3.053 2.37 3.063-2.357c1.693-1.304 41.74-32.226 64.866-58.28l7.385-8.32h-18.75l-16.52-40.04z" />
+                                    <path class="st1" d="M208.207 115.423c4.28-8.712 7.777-19.8 7.064-34.004-.75-15.09-6.77-29.27-16.94-39.93-10.39-10.88-23.97-16.875-38.242-16.875-21.75 0-39.56 13.93-47.053 20.836-7.276-6.964-24.596-20.817-47.212-20.817-14.274 0-27.856 6-38.243 16.89C17.404 52.19 11.39 66.373 10.63 81.46c-.716 14.236 3.685 28.82 13.45 44.59l1.468 2.367h24.15l19.42-44.58 27.1 44.75 11.914-15.512 17.92 25.436 26.685-68.66 25.425 61.567H238v-16h-29.793z" />
+                                </svg>
+                            </div>
+                            <figcaption class="b-panel__entry">
+                                <div class="b-panel__content" data-match-height>
+                                    <span class="b-panel__title">Рятуємо</span>
+                                    <p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                </div>
+                                <a href="#" class="g-btn">Далі <i class="icon-more"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="g-col g-col--one-fourth">
+                        <figure class="b-panel b-panel--has-icon">
+                            <div class="b-panel__icon">
+                                <svg class="b-panel__svg" viewBox="0 0 512.001 512.001" width="70" version="1.1">
+                                    <path class="st1" d="M467.31 16.768H221.453c-6.128 0-11.095 4.967-11.095 11.095v86.45l12.304-7.64c3.13-1.944 6.475-3.256 9.884-3.977V38.958H456.21v160.016H232.55v-25.89l-22.19 13.778v23.208c0 6.128 4.966 11.095 11.094 11.095H467.31c6.126 0 11.094-4.967 11.094-11.095V27.863c0-6.128-4.968-11.095-11.095-11.095z" />
+                                    <path class="st1" d="M306 78.356c-2.918-3.702-8.284-4.335-11.985-1.418l-38.217 30.133c3.65 2.39 6.85 5.58 9.3 9.53.696 1.12 1.3 2.27 1.835 3.43l37.65-29.68c3.703-2.92 4.337-8.28 1.418-11.98z" />
+                                    <circle class="st1" cx="121.535" cy="31.935" r="31.935" />
+                                    <path class="st1" d="M252.01 124.728c-4.49-7.23-13.987-9.45-21.218-4.963l-31.206 19.375-.144-28.81c-.1-20.006-16.458-36.282-36.464-36.282h-15.16c-12.95 33.588-8.778 21.12-19.77 49.63l4.622-20.13c.32-1.51.088-3.08-.655-4.43l-6.264-11.394 5.56-10.11c.83-1.507-.26-3.355-1.98-3.355h-15.27c-1.72 0-2.81 1.84-1.98 3.35l5.57 10.13-6.272 11.41c-.73 1.32-.966 2.86-.672 4.34l4.008 20.172-19.136-49.63H80.1c-20.005 0-36.363 16.274-36.464 36.28l-.57 113.2c-.042 8.51 6.82 15.443 15.33 15.486h.08c8.473 0 15.364-6.848 15.406-15.33l.57-113.2v-.054c.02-1.68 1.396-3.027 3.076-3.014 1.68.01 3.034 1.377 3.034 3.057l.008 160.38c14.106-.6 27.176 4.49 36.98 13.425V221.7h7.984v71.773c5.62 8.27 8.913 18.243 8.913 28.974 0 9.777-2.73 18.928-7.47 26.73 4.868.024 9.594.67 14.1 1.86 6.077-5.27 13.386-9.15 21.438-11.134 0-279.343-.334-106.628-.334-229.42 0-1.78 1.44-3.22 3.22-3.223 1.78-.003 3.227 1.433 3.235 3.21l.28 56.353c.03 5.58 3.07 10.71 7.954 13.41 4.873 2.695 10.834 2.555 15.582-.393l54.604-33.903c7.227-4.486 9.45-13.987 4.96-21.216z" />
+                                    <circle class="st1" cx="429.221" cy="322.831" r="33.803" />
+                                    <path class="st1" d="M511.46 405.81c-.108-21.175-17.422-38.403-38.6-38.403h-84.78c3.637 7.068 5.704 15.07 5.704 23.55 0 9.005-2.405 18.413-7.5 26.782 18.904.76 35.468 10.91 45.15 25.89h40.578V406.2c0-1.84 1.46-3.35 3.3-3.414s3.403 1.345 3.527 3.182l.19 37.66h32.62l-.19-37.823zm-220.99-14.854c0-8.63 2.137-16.763 5.893-23.92h-75.267c3.472 6.94 5.437 14.756 5.437 23.03 0 9.72-2.73 18.925-7.47 26.73 15.56.074 29.913 6.538 40.284 17.267 10.054-9.822 23.76-15.914 38.836-15.995-5.235-8.452-7.714-17.942-7.714-27.112zm-25.65-102.3c-18.67 0-33.805 15.13-33.805 33.802 0 18.628 15.107 33.803 33.804 33.803 18.51 0 33.8-14.96 33.8-33.8 0-18.65-15.11-33.8-33.81-33.8zm-141.603 101.41c0-8.253 1.956-16.054 5.41-22.98-1.456-.073 4.673-.05-89.484-.05-21.068 0-38.49 17.14-38.598 38.404l-.192 38.196h32.62l.192-38.03c.01-1.885 1.54-3.403 3.423-3.398 1.882.006 3.404 1.532 3.404 3.414v38.014H85.72c9.854-15.754 26.8-25.646 45.242-26.406-5.006-8.062-7.745-17.365-7.745-27.165zm-40.43-101.41c-18.67 0-33.804 15.133-33.804 33.802 0 18.584 15.046 33.803 33.803 33.803 18.536 0 33.804-15.01 33.804-33.8 0-18.67-15.135-33.8-33.804-33.8zm339.746 185.15c-.105-21.177-17.42-38.405-38.597-38.405H298.43c-21.177 0-39.602 17.23-39.71 38.41l-.274-.89c-.105-21.09-17.34-38.4-38.597-38.4h-85.51c-21.18 0-39.6 17.23-39.71 38.41L94.44 512h32.62l.192-38.922c.008-1.622 1.327-2.93 2.948-2.926 1.62.004 2.932 1.32 2.932 2.94v38.91h86.392v-38.91c0-1.735 1.405-3.143 3.14-3.148 1.736-.004 3.15 1.397 3.16 3.133l.19 38.923h65.134l.19-38.03v-.003c.01-1.62 1.33-2.928 2.95-2.924 1.62.004 2.93 1.32 2.93 2.94V512h86.394v-38.016c0-1.736 1.405-3.144 3.14-3.15 1.736-.003 3.15 1.398 3.16 3.134l.19 38.03h32.62l-.19-38.19z" />
+                                    <circle class="st1" cx="175.934" cy="389.933" r="34.198" />
+                                    <circle class="st1" cx="342.07" cy="390.821" r="34.198" />
+                                </svg>
+                            </div>
+                            <figcaption class="b-panel__entry">
+                                <div class="b-panel__content" data-match-height>
+                                    <span class="b-panel__title">Навчаємо</span>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                </div>
+                                <a href="#" class="g-btn">Далі <i class="icon-more"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="g-col g-col--one-fourth">
+                        <figure class="b-panel b-panel--has-icon">
+                            <div class="b-panel__icon">
+                                <svg class="b-panel__svg" viewBox="0 0 512.001 512.001" width="70" version="1.1">
+                                    <path class="st1" d="M287.846 79.777c-5.434 0-10.414-2.903-13.095-7.605-7.74 3.365-16.43 5.154-25.44 5.154-9.07 0-17.82-1.81-25.6-5.222-2.606 4.626-7.42 7.517-12.73 7.66 1.703 19.938 18.416 35.592 38.795 35.592 20.375 0 37.084-15.647 38.794-35.58h-.715zm12.967 175.19l-36.81 12.977c-1.05 4.357-2.884 8.6-5.556 12.524-10.116 14.852-29.298 20.7-46.057 13.756l-13.785 9.368c-.568 3.14-.39-9.924-.39 184.53 0 13.188 10.692 23.88 23.88 23.88s23.88-10.692 23.88-23.88V307.867h7.082v180.255c0 13.188 10.69 23.88 23.88 23.88s23.878-10.692 23.878-23.88l-.002-233.156zm90.58-31.22l-23.69-9.82-28.393 9.895c.63 4.097.01 8.285-1.834 12.097-1.217 2.51-2.895 4.71-4.93 6.51l43.604 18.07c10.16 4.21 21.8-.617 26.01-10.762 4.21-10.15-.61-21.792-10.76-26zm-218.33 44.683l-60.176 20.845c-6.01 2.095-9.186 8.666-7.09 14.677l8.646 24.814c2.503 7.18 11.128 9.978 17.363 5.74l69.21-47.036-27.953-19.04z" />
+                                    <path class="st1" d="M406.362 178.54c-1.583-4.544-6.55-6.943-11.095-5.36l-12.354 4.305-2.508-7.2c-1.583-4.543-6.55-6.943-11.095-5.36-4.544 1.584-6.944 6.552-5.36 11.096l2.508 7.2-121.108 42.21 3.05 2.08c9.62 6.55 15.286 16.73 16.437 27.46l56.873-19.82c4.544-1.58 6.944-6.55 5.36-11.09-1.235-3.543-4.53-5.772-8.075-5.835L401 189.635c4.546-1.583 6.946-6.55 5.362-11.095z" />
+                                    <path class="st1" d="M345.632 172.013c-.125-25.006-20.57-45.35-45.578-45.35h-95.15c-17.027 0-32.83 9.195-41.243 23.996l-27.53 48.44c-5.12 9.01-2.47 20.44 6.1 26.28l73.518 50.07c9.086 6.19 21.464 3.833 27.648-5.247 6.188-9.083 3.84-21.46-5.243-27.648L179.8 202.81c19.95-35.102 18.604-33.023 19.74-34.144v25.546l33.493 22.815 66.05-23.018v-22.8c0-1.895 1.532-3.428 3.423-3.428 1.89 0 3.422 1.533 3.422 3.424 0 .31-.028.642-.087 1l.1 19.41 39.73-13.847-.03-5.765zM297.25 64.128c-1.638-8.838-5.666-30.644-5.666-31.455C291.584 14.628 272.656 0 249.307 0c-22.28 0-40.522 13.323-42.146 30.223h-.13l-5.9 33.944c-.33 1.895 1.13 3.63 3.058 3.63h6.39c1.15 0 2.203-.636 2.74-1.653l5.663-10.725c7.683 6.12 18.43 9.92 30.336 9.92 11.807 0 22.48-3.745 30.15-9.777l5.658 10.59c.54 1.007 1.59 1.636 2.735 1.636h6.354c1.933 0 3.4-1.758 3.046-3.67z" />
+                                </svg>
+                            </div>
+                            <figcaption class="b-panel__entry">
+                                <div class="b-panel__content" data-match-height>
+                                    <span class="b-panel__title">Допомагаємо</span>
+                                    <p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
+                                </div>
+                                <a href="#" class="g-btn">Далі <i class="icon-more"></i></a>                              
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="g-col g-col--one-fourth">
+                        <figure class="b-panel b-panel--has-icon">
+                            <div class="b-panel__icon">
+                                <svg class="b-panel__svg" viewBox="0 0 24.432 24.432" width="70" version="1.1">
+                                    <path class="st1" d="M6.42 9.3c1.77 0 3.205-1.434 3.205-3.207 0-1.105.39-2.117-.465-2.69-.512-.35-2.76-.515-3.424-.515-.79 0-1.817.644-2.376 1.12-.695.586-.147 1.103-.147 2.084 0 1.774 1.433 3.21 3.207 3.21zM4.186 5.78c.59-.108.99.086.99.086l.983-.48s-.502.725-.052.48C7.11 5.53 8.23 5.67 8.8 5.782c.02.125.04.253.04.386 0 1.32-1.05 2.387-2.35 2.387-1.294 0-2.343-1.067-2.343-2.387 0-.133.018-.26.04-.39zM22.066 5.643c-.015-.183-.03-.365-.07-.54-.127-1.125-1.133-3.41-4.02-3.34-2.488.058-3.03 1.93-3.162 3.07-.088.28-.145.574-.164.88-3.236.564-2.88 3.848-.904 3.904-.188-1.715.63-2.745.945-3.076.292 1.772 1.82 3.133 3.673 3.133 1.756 0 3.222-1.223 3.62-2.858.302.534.81 1.628.687 2.803 3.113-.027 1.58-3.586-.604-3.975zm-3.703 2.974c-1.455 0-2.64-1.172-2.672-2.62.532-.194.926-1.114.926-1.114s.315.108.315 1.147c.552.192 1.51-1.614 1.51-1.614V5.84c.606.165 2.52-.055 2.52-.055l.07.06c.002.03.01.06.01.092.002 1.478-1.198 2.68-2.677 2.68zM19.143 9.77H16.253l-3.85 4.64-3.728-4.583H4.438L0 14.7l.93.958 3.177-2.71v5.257h.637v3.997H4.34v.47h1.844v-4.467h.69v4.467h1.842v-.47h-.404v-3.997h.773v-5.16l2.54 2.61 1.038-.257.575.144 2.877-3.293.164 1.304-2.673 4.592h3.082v3.998h-.406v.465h1.843v-.466h.002v-3.998h.688v4.463h1.844v-.466h-.405v-3.998h2.39l-2.355-4.592.13-1.606 2.248 3.014 1.49-.37-3.566-4.823" />
+                                </svg>
+                            </div>
+                            <figcaption class="b-panel__entry">
+                                <div class="b-panel__content" data-match-height>
+                                    <span class="b-panel__title">Долучаємо</span>
+                                    <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+                                </div>
+                                <a href="#" class="g-btn">Далі <i class="icon-more"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!--/.g-row-->
+            </div>
+        </section>
+
+        <section class="page__section page-section--has-img">
+            <div class="g-container">
+                <div class="g-col g-col--one-half">
+                    <h3 class="g-subtitle g-subtitle--alt">Наші цінності</h3>
+                    <p>Мальтійська Служба Допомоги є католицькою організацією, яка діє у цілому світі відповідно до тисячолітнього гасла Суверенного Мальтійського Ордену - «<b>Збереження віри і допомога потребуючим</b>».</p>
+                    <ul class="g-list">
+                        <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+                        <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+                        <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+                    </ul>
+                </div>
+                <figure class="page-section--has-img__img" style="background-image:url(img/del/bg01.jpg)"></figure>
+            </div>
+        </section>
+
+        <section class="page__section page__section--action">
+            <div class="g-container">
+                <h3 class="g-title g-title--alt">Стати волонтером</h3>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
+                <a href="#" class="g-btn">Долучитися</a>
+            </div>
+        </section>
+
+        <section class="page__section">
+            <div class="g-container">
+                <h3 class="g-title g-title--alt">Наша команда</h3>
+                <div class="g-row">
+                    <div class="g-col g-col--one-third">
+                        <figure class="b-panel">
+                            <img src="http://placehold.it/200x200" class="b-panel__photo" alt="" />
+                            <figcaption class="b-panel__entry">
+                                <div class="b-panel__content" data-match-height>
+                                    <span class="b-panel__subtitle">John Doe</span>
+                                    <p>Aliquam tincidunt mauris eu risus.</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="g-col g-col--one-third">
+                        <figure class="b-panel">
+                            <img src="http://placehold.it/200x200" class="b-panel__photo" alt="" />
+                            <figcaption class="b-panel__entry">
+                                <div class="b-panel__content" data-match-height>
+                                    <span class="b-panel__subtitle">Pellentesque Odio</span>
+                                    <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra.</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="g-col g-col--one-third">
+                        <figure class="b-panel">
+                            <img src="http://placehold.it/200x200" class="b-panel__photo" alt="" />
+                            <figcaption class="b-panel__entry">
+                                <div class="b-panel__content" data-match-height>
+                                    <span class="b-panel__subtitle">Vestibulum Auctor</span>
+                                    <p></p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!--/.g-row-->
+                <div class="g-text-center">
+                    <a href="staff.html" class="g-btn g-btn--large">Дізнатися більше <i class="icon-more"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="page__section">
+            <div class="g-container">
+                <h4 class="g-title g-title--alt">Останні новини</h4>
+                <div class="g-row">
+                    <div class="g-col g-col--one-third">
+                        <figure class="b-panel b-panel--alt">
+                            <a href="#" class="b-panel__thumb">
+                                <img src="http://placehold.it/400x250" class="b-panel__img" alt="" />
+                            </a>
+                            <figcaption class="b-panel__entry">
+                                <div class="b-panel__content" data-match-height>
+                                    <a href="#" class="b-panel__subtitle">Pellentesque habitant morbi tristique senectus et netus et malesuada fames</a>
+                                    <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est...</p>
+                                </div>
+                                <a href="#" class="g-btn">Читати далі <i class="icon-more"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="g-col g-col--one-third">
+                        <figure class="b-panel b-panel--alt">
+                            <a href="#" class="b-panel__thumb">
+                                <img src="http://placehold.it/400x250" class="b-panel__img" alt="" />
+                            </a>
+                            <figcaption class="b-panel__entry">
+                                <div class="b-panel__content" data-match-height>
+                                    <a href="#" class="b-panel__subtitle">Pellentesque habitant morbi tristique senectus</a>
+                                    <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies...</p>
+                                </div>
+                                <a href="#" class="g-btn">Читати далі <i class="icon-more"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="g-col g-col--one-third">
+                        <figure class="b-panel b-panel--alt">
+                            <a href="#" class="b-panel__thumb">
+                                <img src="http://placehold.it/400x250" class="b-panel__img" alt="" />
+                            </a>
+                            <figcaption class="b-panel__entry">
+                                <div class="b-panel__content" data-match-height>
+                                    <a href="#" class="b-panel__subtitle">Pellentesque habitant morbi</a>
+                                    <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est...</p>
+                                </div>
+                                <a href="#" class="g-btn">Читати далі <i class="icon-more"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!--/.g-roe-->
+            </div>
+        </section>
+
+        <section class="page__section">
+            <div class="g-container">
+                <h4 class="g-title g-title--alt">Нас підтримують</h4>
+                <div class="page__inner">
+                    <div class="b-partner">
+                        <a href="#" class="b-partner__link" rel="nofollow" target="_blank">
+                            <img src="http://placehold.it/200x100" alt="" />
+                        </a>
+                        <a href="#" class="b-partner__link" rel="nofollow" target="_blank">
+                            <img src="http://placehold.it/100x70" alt="" />
+                        </a>
+                        <a href="#" class="b-partner__link" rel="nofollow" target="_blank">
+                            <img src="http://placehold.it/80x50" alt="" />
+                        </a>
+                        <a href="#" class="b-partner__link" rel="nofollow" target="_blank">
+                            <img src="http://placehold.it/200x100" alt="" />
+                        </a>
+                        <a href="#" class="b-partner__link" rel="nofollow" target="_blank">
+                            <img src="http://placehold.it/100x70" alt="" />
+                        </a>
+                    </div>
+                </div>             
+            </div>
+        </section>
+        
+        <!--mobile menu-->    
+        <nav class="page__panel js-mmenu">
+            <ul class="m-menu">
+                <li class="m-menu__item">
+                    <a href="about.html" class="m-menu__link">Про нас</a>
+                    <ul class="m-menu__sub-menu">
+                        <li class="m-menu__sub-menu__item">
+                            <a href="#" class="m-menu__sub-menu__link">МСД у Світі</a>
+                        </li>
+                        <li class="m-menu__sub-menu__item">
+                            <a href="#" class="m-menu__sub-menu__link">МСД в Україні</a>
+                        </li>
+                        <li class="m-menu__sub-menu__item">
+                            <a href="#" class="m-menu__sub-menu__link">Історія Мальтійського Ордену</a>
+                        </li>
+                        <li class="m-menu__sub-menu__item">
+                            <a href="gallery.html" class="m-menu__sub-menu__link">Фотогалерея</a>
+                        </li>
+                        <li class="m-menu__sub-menu__item">
+                            <a href="staff.html" class="m-menu__sub-menu__link">Команда</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="m-menu__item">
+                    <a href="what-we-do.html" class="m-menu__link">Наша діяльність</a>
+                    <ul class="m-menu__sub-menu">
+                        <li class="m-menu__sub-menu__item">
+                            <a href="#" class="m-menu__sub-menu__link">Рятівництво</a>
+                        </li>
+                        <li class="m-menu__sub-menu__item">
+                            <a href="#" class="m-menu__sub-menu__link">Курси першої допомоги</a>
+                        </li>
+                        <li class="m-menu__sub-menu__item">
+                            <a href="#" class="m-menu__sub-menu__link">Допомога війсковим</a>
+                        </li>
+                        <li class="m-menu__sub-menu__item">
+                            <a href="#" class="m-menu__sub-menu__link">Благодійна кухня</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="m-menu__item">
+                    <a href="actions.html" class="m-menu__link">Акції</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="news.html" class="m-menu__link">Новини</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="contacts.html" class="m-menu__link">Контакти</a>
+                </li>
+            </ul>
+        </nav>
+        <!--/mobile menu-->
+    </main>
+	<!--/MAIN CONTENT-->
+
+    <!--FOOTER-->
+    <footer class="b-footer">
+        <div class="b-footer__main">
+            <div class="b-footer__col">
+                <a href="index.html" class="f-logo">
+                    <figure class="f-logo__inner">
+                        <div class="f-logo__thumb"></div>
+                        <figcaption class="f-logo__entry">
+                            Мальтійська служба допомоги
+                        </figcaption>
+                    </figure>
+                </a>
+                <p>Збереження віри та допомога потребуючим</p>
+                <p><i class="icon-location"></i>&emsp;Україна, Київ, вул. Січневого Повстання, 17а/19</p>
+                <p><i class="icon-phone"></i>&emsp;<a href="tel:+380502242414">+380&nbsp;50&nbsp;224-24-14</a></p>
+                <p><i class="icon-mail"></i>&emsp;<a href="mailto:malteser.kyiv@gmail.com">malteser.kyiv@gmail.com</a></p>
+            </div>
+            <nav class="b-footer__col">
+                <h5 class="b-footer__title">Діяльність</h5>
+                <ul class="f-menu">
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Замовити медичний супровід</a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Замовити курс першої допомоги</a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Долучитися</a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Допомогти</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="b-footer__col">
+                <h5 class="b-footer__title">Останні новини</h5>
+                <ul class="f-menu">
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Pellentesque habitant morbi tristique senectus</a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Aliquam tincidunt mauris eu risus</a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Vestibulum auctor dapibus neque</a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Nam dui mi, tincidunt quis, accumsan porttitor</a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Pellentesque fermentum dolor</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="b-footer__col">
+                <h5 class="b-footer__title">Ми у соцмережах</h5>
+                <ul class="f-social">
+                    <li class="f-social__item">
+                        <a href="#" rel="nofollow" target="_blank" class="f-social__link"><i class="icon-facebook"></i></a>
+                    </li>
+                    <li class="f-social__item">
+                        <a href="#" rel="nofollow" target="_blank" class="f-social__link"><i class="icon-twiter"></i></a>
+                    </li>
+                    <li class="f-social__item">
+                        <a href="#" rel="nofollow" target="_blank" class="f-social__link"><i class="icon-video"></i></a>
+                    </li>
+                    <li class="f-social__item">
+                        <a href="#" rel="nofollow" target="_blank" class="f-social__link"><i class="icon-gplus"></i></a>
+                    </li>
+                    <li class="f-social__item">
+                        <a href="#" rel="nofollow" target="_blank" class="f-social__link"><i class="icon-rss"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="b-footer__sole">
+            <p>Copyright © 2015-2017</p>
+        </div>
+    </footer>
+    <!--/FOOTER-->
+
+    <!--scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/app.min.js"></script>
+    <!--/scripts-->
+
+</body>
+</html>

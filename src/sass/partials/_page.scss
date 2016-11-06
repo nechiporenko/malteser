@@ -1,0 +1,97 @@
+﻿@import "../modules/_base.scss";
+/*Page sections*/
+.page__content{
+    padding:15px 0 35px;
+    font-size:rem($project-font-size);
+    line-height:strip-units($project-line-height/$project-font-size);
+
+    @include media($desktop){
+        min-height:400px;
+    }
+}
+
+.page__section{
+    padding:25px 0;
+}
+
+.page-section--alt{
+    background:#f5f5f5;
+}
+
+.page__inner{
+    @extend .g-container;
+    max-width:960px;
+}
+
+.page-section--has-img{
+    background:#f5f5f5;
+    position:relative;
+}
+.page-section--has-img__img{//на планшете и выше покажем картинку-бэкграунд справа
+    display:none;
+    margin:0;
+    padding:0;
+    position:absolute;
+    top:0; right:0; bottom:0; left:50%;
+    z-index:1;
+    background-repeat:no-repeat;
+    background-position:left bottom;
+
+    &:after{
+        content:'';
+        position:absolute;
+        top:0; right:0;
+        bottom:0; left:0;
+        background:rgba(#000, .1);
+    }
+
+    @include media($tablet){
+        display:block;
+    }
+}
+
+.page__section--action{
+    padding:35px 0;
+    @include linear-gradient(to right, $primary, lighten($primary, 12%));
+    color:#fff;
+    font-size:rem(20px);
+    text-align:center;
+
+    .g-title--alt{
+        margin-bottom:30px;
+        color:#fff;
+
+        &:after{
+            background:#fff;
+        }
+    }
+
+    .g-btn{
+        height:50px;
+        line-height:50px;
+        padding:0 45px;
+        font-size:rem(18px);
+        text-transform:uppercase;
+        background:#fff;
+        color:$primary;
+
+        &:before{
+            background:#f5f5f5;
+        }
+
+        &:hover,
+        &:focus,
+        &:active{
+            color:$primary;
+        }
+    }
+}
+
+//other parts
+@import "page/_breadcrumbs.scss";
+@import "page/_slider.scss";
+@import "page/_panel.scss";
+@import "page/_partner.scss";
+@import "page/_scroll-up.scss";
+
+

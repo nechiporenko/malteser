@@ -1,0 +1,26 @@
+﻿@import "../../modules/_base.scss";
+/*Footer Logo*/
+.f-logo{
+    display:block;
+    height:46px;
+    text-decoration:none;
+    color:$text-color;
+    color:#fff;
+}
+.f-logo__inner{
+    height:100%;
+    padding:0 0 0 50px;
+    position:relative;
+}
+.f-logo__thumb{
+    @extend .h-logo__thumb;
+}
+.f-logo__entry{
+    height:100%;
+    display:flex;
+    align-items:center;
+    font-size:rem(15px);
+    font-weight:600;
+    line-height:1.2;
+    text-shadow:0 0 0 1px rgba(#000, .5);
+}

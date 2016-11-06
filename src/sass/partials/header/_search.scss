@@ -1,0 +1,65 @@
+﻿@import "../../modules/_base.scss";
+/*Header search form*/
+.h-search{
+    float:right;
+    font-size:0;
+}
+
+.h-search__input{
+    @extend .g-input;
+    height:32px;
+    width:180px;
+    margin:0;
+    border-radius:0;
+    background:lighten($primary-alt, 4%);
+    color:#fff;
+    border-color:lighten($primary-alt, 4%);
+    font-size:rem(15px);
+    
+
+    @include placeholder{
+        color:$border-color;
+    }
+
+    &:hover{
+        border-color:lighten($primary-alt, 7%);
+        background:lighten($primary-alt, 7%);
+    }
+
+    &:focus{
+        border-color:lighten($primary-alt, 11%);
+        background:lighten($primary-alt, 11%);
+    }
+
+    &:hover,
+    &:focus{
+        box-shadow:none;
+    }
+}
+
+.h-search__btn{
+    @extend .g-clearbutton;
+    @include size(32px);
+    color:$border-color;
+    background:lighten($primary-alt, 4%);
+    font-size:rem(18px);
+
+    &:hover,
+    &:active,
+    &:focus{
+        background:$primary;
+    }
+}
+
+@include media($desktop){
+    .h-search{
+        float:left;
+    }
+    .h-search__input{
+        width:200px;
+        height:50px;
+    }
+    .h-search__btn{
+        @include size(50px);
+    }
+}

@@ -1,0 +1,119 @@
+﻿@import "../../modules/_base.scss";
+/*Hero Slider*/
+.b-hero{
+    max-height:730px;
+    margin:-15px 0 15px;
+    overflow:hidden;
+    display:none;
+    position:relative;
+    background:#bbb;
+
+    &:before{
+        content:'';
+        display:block;
+        padding-top:(730*100%)/1920;
+    }
+
+    .bx-wrapper,
+    .bx-viewport{
+        height:100% !important;
+    }
+}
+
+.b-hero__list{
+    @extend .g-clearlist;
+    @extend .g-clearfix;
+    height:100%;
+}
+.b-hero__item{
+    @extend .g-column;
+    height:100%;
+    position:relative;
+}
+.b-hero__inner,
+.b-hero__thumb,
+.b-hero__wrap{
+    position:absolute;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+}
+
+.b-hero__inner{
+    z-index:1;
+}
+.b-hero__thumb{
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    display:none;
+
+    &:after{
+        content:'';
+        display:block;
+        position:absolute;
+        top:0; right:0; bottom:0; left:0;
+        background:rgba(#000, .4);
+        z-index:2;
+    }
+}
+
+.b-hero__entry{
+    width:100%;
+    height:100%;
+    padding:30px 0;
+    display:flex;
+    align-items:center;
+    box-sizing:border-box;
+    position:relative;
+    z-index:3;
+    color:#fff;
+    font-size:rem(18px);
+}
+
+.b-hero__content{
+    margin-bottom:25px;
+}
+
+.b-hero__title{
+    @extend .g-title;
+    font-weight:600;
+    text-transform:uppercase;
+    margin-bottom:20px;
+    color:#fff;
+}
+
+@include media($tablet){
+    .b-hero,
+    .b-hero__thumb{
+        display:block;
+    }
+}
+
+//анимация
+@include media($desktop){
+    .js-animate{
+    .b-hero__title,
+        & > p{
+            transition-property:opacity, transform;
+            transition-timing-function:linear;
+            transition-duration:1s;
+            opacity:0.2;
+        }
+
+        .b-hero__title{
+            transform:translateY(-15px);
+        }
+
+        & > p{
+            transform:translateY(15px);
+        }
+
+        &.active{
+            .b-hero__title,
+            & > p{
+                transform:translateY(0);
+                opacity:1;
+            }
+        }
+    }
+}

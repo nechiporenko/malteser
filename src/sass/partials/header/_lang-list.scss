@@ -1,0 +1,34 @@
+﻿@import "../../modules/_base.scss";
+/*Header lang list*/
+.h-lang{
+    @extend .g-clearlist;
+    float:left;
+    font-size:0;
+}
+.h-lang__item{
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:25px;
+    font-size:rem(15px);
+}
+.h-lang__link{
+    display:block;
+    height:32px;
+    line-height:32px;
+    color:#fff;
+    text-decoration:none;
+    text-transform:uppercase;
+
+    &:hover{
+        color:$primary;
+    }
+
+    @include media($desktop){
+        height:50px;
+        line-height:50px;
+    }
+
+    .h-lang__item--active > &{
+        cursor:default;
+    }
+}

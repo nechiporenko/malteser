@@ -1,0 +1,42 @@
+@import "../modules/base";
+/*Site Header*/
+.b-header{
+    position:relative;
+    z-index:1000;
+}
+.b-header__top{
+    padding:2px 0;
+    background:$primary-alt;
+}
+
+.b-header__main{
+    width:100%;
+    padding:4px 0;
+    background:#fff;  
+    box-shadow:0 1px 1px 1px rgba(#000, .2);
+    transition:.4s ease-out transform;
+    backface-visibility:hidden;
+}
+
+@include media($desktop){
+    .b-header__main{
+        padding:0;
+    }
+
+    .b-header__main--stuck{
+        position:fixed;
+        top:0; left:0;
+    }
+
+    .b-header__main.hidden{
+        transform:translateY(-100px);
+    }
+}
+
+//other header parts
+@import "header/_lang-list.scss";
+@import "header/_search.scss";
+@import "header/_action-list.scss";
+@import "header/_logo.scss";
+@import "header/_mobile-menu-button.scss";
+

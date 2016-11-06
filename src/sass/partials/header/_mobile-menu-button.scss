@@ -1,0 +1,39 @@
+﻿@import "../../modules/_base.scss";
+/*Header mobile menu toggle button*/
+.b-header__mtoggl{
+    @extend .g-clearbutton;
+    width:32px;
+    float:right;
+    height:32px;
+    line-height:32px;
+    font-size:rem(24px);
+
+    [class^="icon-"], [class*=" icon-"]{
+        @extend .g-transition;
+        transition-property:transform;
+    }
+
+    &:hover,
+    &:active{
+        color:$primary;
+    }
+
+    &.active{
+        color:$primary;
+
+        [class^="icon-"], [class*=" icon-"]{
+            transform:rotate(-180deg);
+        }
+    }
+
+    @include media($small){
+        height:46px;
+        margin:13px 0;
+        line-height:46px;
+        font-size:rem(32px);
+    }
+
+    @include media($desktop){
+        display:none;
+    }
+}

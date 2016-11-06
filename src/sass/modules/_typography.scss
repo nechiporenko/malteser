@@ -1,0 +1,119 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=cyrillic');
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?493caj');
+  src:  url('../fonts/icomoon.eot?493caj#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?493caj') format('truetype'),
+    url('../fonts/icomoon.woff?493caj') format('woff'),
+    url('../fonts/icomoon.svg?493caj#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  display:inline-block;
+  vertical-align:middle;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration:none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-right:before {
+  content: "\e900";
+}
+.icon-arrow-left:before {
+  content: "\e901";
+}
+.icon-check:before {
+  content: "\e902";
+}
+.icon-close:before {
+  content: "\e903";
+}
+.icon-credit-card:before {
+  content: "\e904";
+}
+.icon-donate:before {
+  content: "\e905";
+}
+.icon-down:before {
+  content: "\e906";
+}
+.icon-download:before {
+  content: "\e907";
+}
+.icon-facebook:before {
+  content: "\e908";
+}
+.icon-gplus:before {
+  content: "\e909";
+}
+.icon-heart:before {
+  content: "\e90a";
+}
+.icon-injury:before {
+  content: "\e90b";
+}
+.icon-location:before {
+  content: "\e90c";
+}
+.icon-mail:before {
+  content: "\e90d";
+}
+.icon-medical-kit:before {
+  content: "\e90e";
+}
+.icon-menu:before {
+  content: "\e90f";
+}
+.icon-more:before {
+  content: "\e910";
+}
+.icon-new-user:before {
+  content: "\e911";
+}
+.icon-phone:before {
+  content: "\e912";
+}
+.icon-question:before {
+  content: "\e913";
+}
+.icon-rss:before {
+  content: "\e914";
+}
+.icon-search:before {
+  content: "\e915";
+}
+.icon-skype:before {
+  content: "\e916";
+}
+.icon-tag:before {
+  content: "\e917";
+}
+.icon-tags:before {
+  content: "\e918";
+}
+.icon-transport:before {
+  content: "\e919";
+}
+.icon-twiter:before {
+  content: "\e91a";
+}
+.icon-up:before {
+  content: "\e91b";
+}
+.icon-video:before {
+  content: "\e91c";
+}
+.icon-zoom:before {
+  content: "\e91d";
+}

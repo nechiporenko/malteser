@@ -1,0 +1,115 @@
+﻿@import "../../modules/_base.scss";
+/*Page icon panel*/
+.b-panel{
+    padding:0 10px 14px;
+    margin:0 0 2*$project-line-height;
+
+    &:hover{
+        .b-panel__svg{
+            .st1{
+                fill:$primary;
+            }
+        }
+        .b-panel__title{
+            color:$primary;
+        }
+
+        .b-panel__thumb{
+            &:after{
+                opacity:1;
+            }
+        }
+    }
+}
+
+.b-panel--has-icon{
+    padding:65px 10px 14px;
+    margin:50px 0 2*$project-line-height;
+    position:relative;
+    background:#f5f5f5;
+    @extend .g-shadow-hover;
+}
+
+.b-panel--alt{
+    background:#f5f5f5;
+    @extend .g-shadow-hover;
+}
+
+.b-panel__icon{
+    @include size(100px);
+    border-radius:50%;
+    box-shadow:inset 0 0 1px 1px $primary;
+    position:absolute;
+    top:-50px;
+    left:50%;
+    margin-left:-50px;
+    background:#fff;
+}
+
+.b-panel__svg{
+    width:70px;
+    height:auto;
+    @extend .g-align;
+
+    .st1{
+        @extend .g-transition;
+        transition-property:fill;
+        fill:$primary-alt;
+    }
+}
+
+.b-panel__photo{
+    display:block;
+    margin:0 auto $project-line-height;
+    border-radius:50%;
+}
+
+.b-panel__title,
+.b-panel__subtitle{
+    display:block;
+    margin-bottom:$project-line-height/2;
+    text-align:center;
+    color:$primary-alt;
+    font-size:rem(18px);
+}
+.b-panel__title{   
+    text-transform:uppercase;
+    font-weight:700;
+    @extend .g-transition;
+    transition-property:color;
+}
+
+.b-panel__subtitle{
+    font-weight:600;
+    line-height:1.1;
+    text-decoration:none;
+}
+a.b-panel__subtitle{
+    &:hover{
+        color:$primary;
+    }
+}
+
+.b-panel__entry{
+    text-align:center;
+}
+.b-panel__content{
+    overflow:hidden;
+}
+
+.b-panel__thumb{
+    display:block;
+    text-align:center;
+    margin:0 -10px 14px;
+    position:relative;
+
+    &:after{
+        content:'';
+        position:absolute;
+        top:0; right:0; bottom:0; left:0;
+        background:rgba(#000, .4);
+        opacity:0;
+        @extend .g-transition;
+        transition-property:opacity;
+    }
+}
