@@ -79,6 +79,7 @@ $loader:   '../img/loader.gif';
     text-align:right;
 }
 .bx-controls-direction a {
+    display:block;
 	position: absolute;
 	top: 50%;
 	margin-top: -$project-line-height;

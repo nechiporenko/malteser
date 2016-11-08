@@ -31,6 +31,7 @@
     font-weight:600;
     line-height:50px;
     white-space:nowrap;
+    text-shadow:0 0 1px rgba(#000, .7);
     @extend .g-clearfix;
 
     &:hover{
@@ -56,5 +57,6 @@
 
     [class^="icon-"], [class*=" icon-"]{
         @extend .g-align;
+        text-shadow:none;
     }
 }
