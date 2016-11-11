@@ -1,12 +1,12 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=cyrillic');
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&subset=cyrillic');
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?493caj');
-  src:  url('../fonts/icomoon.eot?493caj#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?493caj') format('truetype'),
-    url('../fonts/icomoon.woff?493caj') format('woff'),
-    url('../fonts/icomoon.svg?493caj#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?8hp50x');
+  src:  url('../fonts/icomoon.eot?8hp50x#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?8hp50x') format('truetype'),
+    url('../fonts/icomoon.woff?8hp50x') format('woff'),
+    url('../fonts/icomoon.svg?8hp50x#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -27,6 +27,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-news:before {
+  content: "\e91e";
+}
+.icon-pictures:before {
+  content: "\e91f";
+}
+.icon-up:before {
+  content: "\e91b";
+}
 .icon-arrow-right:before {
   content: "\e900";
 }
@@ -107,9 +116,6 @@
 }
 .icon-twiter:before {
   content: "\e91a";
-}
-.icon-up:before {
-  content: "\e91b";
 }
 .icon-video:before {
   content: "\e91c";

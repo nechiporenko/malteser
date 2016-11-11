@@ -425,7 +425,8 @@ jQuery(document).ready(function ($) {
                 close: true,
                 closeText: '<i class="icon-close"></i>',
                 showCounter: true,
-                disableScroll: false
+                disableScroll: false,
+                widthRatio: .9
             });
         });
     };

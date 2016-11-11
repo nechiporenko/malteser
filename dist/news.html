@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html class="no-js" lang="uk">
+<head>
+    <title>Malteser News Page</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Page Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body class="page">
+    <!--HEADER-->
+    <header class="b-header">
+        <div class="b-header__top">
+            <div class="g-container">
+                <!--lang switcher-->  
+                <ul class="h-lang">
+                    <li class="h-lang__item h-lang__item--active">
+                        <a href="#" class="h-lang__link">Uk</a>
+                    </li>
+                    <li class="h-lang__item">
+                        <a href="#" class="h-lang__link">Pl</a>
+                    </li>
+                </ul>
+                <!--/lang switcher-->
+                <!--search form-->
+                <form class="h-search">
+                    <input type="text" name="s" id="s" class="h-search__input" placeholder="Шукати..." />
+                    <button type="submit" class="h-search__btn">
+                        <i class="icon-search"></i>
+                    </button>
+                </form>
+                <!--/search form-->
+                <!--header action list-->
+                <ul class="h-action">
+                    <li class="h-action__item">
+                        <a href="tel:+380502242414" class="h-action__link">
+                            <span class="h-action__icon">
+                                <i class="icon-phone"></i>
+                            </span>
+                            (050) 224-24-14
+                        </a>
+                    </li>
+                    <li class="h-action__item">
+                        <a href="#" class="h-action__link">
+                            <span class="h-action__icon">
+                                <i class="icon-heart"></i>
+                            </span>
+                            Замовити послуги
+                        </a>
+                    </li>
+                    <li class="h-action__item">
+                        <a href="#" class="h-action__link">
+                            <span class="h-action__icon">
+                                <i class="icon-donate"></i>
+                            </span>
+                            Допомогти
+                        </a>
+                    </li>
+                </ul>
+                <!--/header action list-->
+            </div>
+        </div>
+        <div class="b-header__main js-header">
+            <nav class="g-container">
+                <!--logo-->
+                <a href="index.html" class="h-logo">
+                    <figure class="h-logo__inner">
+                        <div class="h-logo__thumb"></div>
+                        <figcaption class="h-logo__entry">
+                            Мальтійська служба допомоги
+                            <span class="h-logo__city">м.Київ</span>
+                        </figcaption>
+                    </figure>
+                </a>
+                <!--/logo-->
+                <!--desktop menu-->
+                <ul class="h-menu js-menu">
+                    <li class="h-menu__item">
+                        <a href="about.html" class="h-menu__link">Про нас</a>
+                        <ul class="h-menu__sub-menu">
+                            <li class="h-menu__sub-menu__item">
+                                <a href="#" class="h-menu__sub-menu__link">МСД у Світі</a>
+                            </li>
+                            <li class="h-menu__sub-menu__item">
+                                <a href="#" class="h-menu__sub-menu__link">МСД в Україні</a>
+                            </li>
+                            <li class="h-menu__sub-menu__item">
+                                <a href="#" class="h-menu__sub-menu__link">Історія Мальтійського Ордену</a>
+                            </li>
+                            <li class="h-menu__sub-menu__item">
+                                <a href="gallery.html" class="h-menu__sub-menu__link">Фотогалерея</a>
+                            </li>
+                            <li class="h-menu__sub-menu__item">
+                                <a href="staff.html" class="h-menu__sub-menu__link">Команда</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="what-we-do.html" class="h-menu__link">Наша діяльність</a>
+                        <ul class="h-menu__sub-menu">
+                            <li class="h-menu__sub-menu__item">
+                                <a href="#" class="h-menu__sub-menu__link">Рятівництво</a>
+                            </li>
+                            <li class="h-menu__sub-menu__item">
+                                <a href="#" class="h-menu__sub-menu__link">Курси першої допомоги</a>
+                            </li>
+                            <li class="h-menu__sub-menu__item">
+                                <a href="#" class="h-menu__sub-menu__link">Допомога війсковим</a>
+                            </li>
+                            <li class="h-menu__sub-menu__item">
+                                <a href="#" class="h-menu__sub-menu__link">Благодійна кухня</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="actions.html" class="h-menu__link">Акції</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="news.html" class="h-menu__link">Новини</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="contacts.html" class="h-menu__link">Контакти</a>
+                    </li>
+                </ul>
+                <!--/desktop menu-->
+
+                <!--mobile menu switcher-->
+                <button type="button" class="b-header__mtoggl js-mtoggl">
+                    <i class="icon-menu"></i>
+                </button>
+                <!--/mobile menu switcher-->
+            </nav>
+        </div>
+    </header>
+    <!--/HEADER-->
+	<!--MAIN CONTENT-->
+    <main class="page__content">
+       
+        <div class="page__section">
+            <div class="g-container">
+                <ol class="b-crumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+                    <li class="b-crumb__item" property="itemListElement" typeof="ListItem">
+                        <a href="index.html" class="b-crumb__link" property="item" typeof="WebPage">
+                            <span class="b-crumb__name" property="name">Головна</span>
+                            <meta property="position" content="1">
+                        </a>
+                    </li>
+                    <li class="b-crumb__item" property="itemListElement" typeof="ListItem">
+                        <span class="b-crumb__current" property="item" typeof="WebPage">
+                            <span class="b-crumb__name" property="name">Новини</span>
+                            <meta property="position" content="2">
+                        </span>
+                    </li>
+                </ol>
+                
+                <div class="g-row">
+                    <section class="g-col g-col--two-thirds">
+                        <h1 class="g-title">Новини МСД</h1>
+                        <ul class="b-news">
+                            <li class="b-news__item">
+                                <article class="b-news__excerpt">
+                                    <figure class="b-news__thumb">
+                                        <a href="post.html" class="b-news__thumblink">
+                                            <img src="http://placehold.it/400x300" class="b-news__img" alt="" />
+                                        </a>
+                                    </figure>
+                                    <div class="b-news__entry">
+                                        <h3 class="b-news__title">
+                                            <a href="post.html" class="b-news__link">
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                            </a>
+                                        </h3>
+                                        <time class="b-news__date" datetime="2016-11-25">25.11.2016</time>
+                                        <p class="b-news__quote">
+                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante...
+                                        </p>
+                                        <a href="post.html" class="b-news__more">Читати далі <i class="icon-more"></i></a>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="b-news__item">
+                                <article class="b-news__excerpt">
+                                    <figure class="b-news__thumb">
+                                        <a href="post.html" class="b-news__thumblink">
+                                            <img src="http://placehold.it/400x300" class="b-news__img" alt="" />
+                                        </a>
+                                    </figure>
+                                    <div class="b-news__entry">
+                                        <h3 class="b-news__title">
+                                            <a href="post.html" class="b-news__link">
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                            </a>
+                                        </h3>
+                                        <time class="b-news__date" datetime="2016-11-25">25.11.2016</time>
+                                        <p class="b-news__quote">
+                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante...
+                                        </p>
+                                        <a href="post.html" class="b-news__more">Читати далі <i class="icon-more"></i></a>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="b-news__item">
+                                <article class="b-news__excerpt">
+                                    <figure class="b-news__thumb">
+                                        <a href="post.html" class="b-news__thumblink">
+                                            <img src="http://placehold.it/400x300" class="b-news__img" alt="" />
+                                        </a>
+                                    </figure>
+                                    <div class="b-news__entry">
+                                        <h3 class="b-news__title">
+                                            <a href="post.html" class="b-news__link">
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                            </a>
+                                        </h3>
+                                        <time class="b-news__date" datetime="2016-11-25">25.11.2016</time>
+                                        <p class="b-news__quote">
+                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante...
+                                        </p>
+                                        <a href="post.html" class="b-news__more">Читати далі <i class="icon-more"></i></a>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="b-news__item">
+                                <article class="b-news__excerpt">
+                                    <figure class="b-news__thumb">
+                                        <a href="post.html" class="b-news__thumblink">
+                                            <img src="http://placehold.it/400x300" class="b-news__img" alt="" />
+                                        </a>
+                                    </figure>
+                                    <div class="b-news__entry">
+                                        <h3 class="b-news__title">
+                                            <a href="post.html" class="b-news__link">
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                            </a>
+                                        </h3>
+                                        <time class="b-news__date" datetime="2016-11-25">25.11.2016</time>
+                                        <p class="b-news__quote">
+                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante...
+                                        </p>
+                                        <a href="post.html" class="b-news__more">Читати далі <i class="icon-more"></i></a>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="b-news__item">
+                                <article class="b-news__excerpt">
+                                    <figure class="b-news__thumb">
+                                        <a href="post.html" class="b-news__thumblink">
+                                            <img src="http://placehold.it/400x300" class="b-news__img" alt="" />
+                                        </a>
+                                    </figure>
+                                    <div class="b-news__entry">
+                                        <h3 class="b-news__title">
+                                            <a href="post.html" class="b-news__link">
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                            </a>
+                                        </h3>
+                                        <time class="b-news__date" datetime="2016-11-25">25.11.2016</time>
+                                        <p class="b-news__quote">
+                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante...
+                                        </p>
+                                        <a href="post.html" class="b-news__more">Читати далі <i class="icon-more"></i></a>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="b-news__item">
+                                <article class="b-news__excerpt">
+                                    <figure class="b-news__thumb">
+                                        <a href="post.html" class="b-news__thumblink">
+                                            <img src="http://placehold.it/400x300" class="b-news__img" alt="" />
+                                        </a>
+                                    </figure>
+                                    <div class="b-news__entry">
+                                        <h3 class="b-news__title">
+                                            <a href="post.html" class="b-news__link">
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                            </a>
+                                        </h3>
+                                        <time class="b-news__date" datetime="2016-11-25">25.11.2016</time>
+                                        <p class="b-news__quote">
+                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante...
+                                        </p>
+                                        <a href="post.html" class="b-news__more">Читати далі <i class="icon-more"></i></a>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="b-news__item">
+                                <article class="b-news__excerpt">
+                                    <figure class="b-news__thumb">
+                                        <a href="post.html" class="b-news__thumblink">
+                                            <img src="http://placehold.it/400x300" class="b-news__img" alt="" />
+                                        </a>
+                                    </figure>
+                                    <div class="b-news__entry">
+                                        <h3 class="b-news__title">
+                                            <a href="post.html" class="b-news__link">
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                            </a>
+                                        </h3>
+                                        <time class="b-news__date" datetime="2016-11-25">25.11.2016</time>
+                                        <p class="b-news__quote">
+                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante...
+                                        </p>
+                                        <a href="post.html" class="b-news__more">Читати далі <i class="icon-more"></i></a>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
+
+                        <div class="b-pagination">
+                            <span>1</span>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">...</a>
+                            <a href="#">»</a>
+                        </div>
+                    </section>
+
+                    <!--sidebar-->
+                    <aside class="g-col g-col--one-third">
+                        <h4 class="g-subtitle g-subtitle--alt"><i class="icon-tag"></i> Категорії</h4>
+                        <ul class="b-taglist">
+                            <li class="b-taglist__item">
+                                <a href="#">Новини</a>
+                            </li>
+                            <li class="b-taglist__item">
+                                <a href="#">Події</a>
+                            </li>
+                            <li class="b-taglist__item">
+                                <a href="#">МСД в Україні</a>
+                            </li>
+                            <li class="b-taglist__item">
+                                <a href="#">МСД у світі</a>
+                            </li>
+                        </ul>
+
+                        <h4 class="g-subtitle g-subtitle--alt"><i class="icon-tags"></i> Теги</h4>
+                        <ul class="b-taglist">
+                            <li class="b-taglist__item">
+                                <a href="#">Рятивництво</a>
+                            </li>
+                            <li class="b-taglist__item">
+                                <a href="#">Курси першої допомоги</a>
+                            </li>
+                            <li class="b-taglist__item">
+                                <a href="#">Мальтійський Орден</a>
+                            </li>
+                            <li class="b-taglist__item">
+                                <a href="#">Благодійна кухня</a>
+                            </li>
+                            <li class="b-taglist__item">
+                                <a href="#">Допомога війсковим</a>
+                            </li>
+                        </ul>
+
+                        <h4 class="g-subtitle g-subtitle--alt"><i class="icon-pictures"></i> Останні фото</h4>
+                        <ul class="b-gallery b-gallery--sidebar js-gallery">
+                            <li class="b-gallery__item">
+                                <a href="img/del/box01.jpg" class="b-gallery__link" target="_blank">
+                                    <figure class="b-gallery__inner">
+                                        <img src="http://placehold.it/400x300/bb55cc" class="b-gallery__img" />
+                                        <figcaption class="b-gallery__entry">
+                                            Pellentesque habitant morbi tristique senectus et netus
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="b-gallery__item">
+                                <a href="img/del/box02.jpg" class="b-gallery__link">
+                                    <figure class="b-gallery__inner">
+                                        <img src="http://placehold.it/400x300/55bbcc" class="b-gallery__img" />
+                                        <figcaption class="b-gallery__entry">
+                                            Vestibulum auctor dapibus neque
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="b-gallery__item">
+                                <a href="img/del/box03.jpg" class="b-gallery__link">
+                                    <figure class="b-gallery__inner">
+                                        <img src="http://placehold.it/400x300/ff55bb" class="b-gallery__img" />
+                                        <figcaption class="b-gallery__entry">
+                                            Donec eu libero sit amet quam egestas
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="b-gallery__item">
+                                <a href="img/del/box04.jpg" class="b-gallery__link">
+                                    <figure class="b-gallery__inner">
+                                        <img src="http://placehold.it/400x300/ccdd22" class="b-gallery__img" />
+                                        <figcaption class="b-gallery__entry">
+                                            Morbi in sem quis dui placerat ornare
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <!--/sidebar-->
+                </div>
+            </div>
+        </div>
+        
+        <!--mobile menu-->    
+        <nav class="page__panel js-mmenu">
+            <ul class="m-menu">
+                <li class="m-menu__item">
+                    <a href="about.html" class="m-menu__link">Про нас</a>
+                    <ul class="m-menu__sub-menu">
+                        <li class="m-menu__sub-menu__item">
+                            <a href="#" class="m-menu__sub-menu__link">МСД у Світі</a>
+                        </li>
+                        <li class="m-menu__sub-menu__item">
+                            <a href="#" class="m-menu__sub-menu__link">МСД в Україні</a>
+                        </li>
+                        <li class="m-menu__sub-menu__item">
+                            <a href="#" class="m-menu__sub-menu__link">Історія Мальтійського Ордену</a>
+                        </li>
+                        <li class="m-menu__sub-menu__item">
+                            <a href="gallery.html" class="m-menu__sub-menu__link">Фотогалерея</a>
+                        </li>
+                        <li class="m-menu__sub-menu__item">
+                            <a href="staff.html" class="m-menu__sub-menu__link">Команда</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="m-menu__item">
+                    <a href="what-we-do.html" class="m-menu__link">Наша діяльність</a>
+                    <ul class="m-menu__sub-menu">
+                        <li class="m-menu__sub-menu__item">
+                            <a href="#" class="m-menu__sub-menu__link">Рятівництво</a>
+                        </li>
+                        <li class="m-menu__sub-menu__item">
+                            <a href="#" class="m-menu__sub-menu__link">Курси першої допомоги</a>
+                        </li>
+                        <li class="m-menu__sub-menu__item">
+                            <a href="#" class="m-menu__sub-menu__link">Допомога війсковим</a>
+                        </li>
+                        <li class="m-menu__sub-menu__item">
+                            <a href="#" class="m-menu__sub-menu__link">Благодійна кухня</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="m-menu__item">
+                    <a href="actions.html" class="m-menu__link">Акції</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="news.html" class="m-menu__link">Новини</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="contacts.html" class="m-menu__link">Контакти</a>
+                </li>
+            </ul>
+        </nav>
+        <!--/mobile menu-->
+    </main>
+	<!--/MAIN CONTENT-->
+
+    <!--FOOTER-->
+    <footer class="b-footer">
+        <div class="b-footer__main">
+            <div class="b-footer__col">
+                <a href="index.html" class="f-logo">
+                    <figure class="f-logo__inner">
+                        <div class="f-logo__thumb"></div>
+                        <figcaption class="f-logo__entry">
+                            Мальтійська служба допомоги
+                        </figcaption>
+                    </figure>
+                </a>
+                <p>Збереження віри та допомога потребуючим</p>
+                <p><i class="icon-location"></i>&emsp;Україна, Київ, вул. Січневого Повстання, 17а/19</p>
+                <p><i class="icon-phone"></i>&emsp;<a href="tel:+380502242414">+380&nbsp;50&nbsp;224-24-14</a></p>
+                <p><i class="icon-mail"></i>&emsp;<a href="mailto:malteser.kyiv@gmail.com">malteser.kyiv@gmail.com</a></p>
+            </div>
+            <nav class="b-footer__col">
+                <h5 class="b-footer__title">Діяльність</h5>
+                <ul class="f-menu">
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Замовити медичний супровід</a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Замовити курс першої допомоги</a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Долучитися</a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Допомогти</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="b-footer__col">
+                <h5 class="b-footer__title">Останні новини</h5>
+                <ul class="f-menu">
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Pellentesque habitant morbi tristique senectus</a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Aliquam tincidunt mauris eu risus</a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Vestibulum auctor dapibus neque</a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Nam dui mi, tincidunt quis, accumsan porttitor</a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Pellentesque fermentum dolor</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="b-footer__col">
+                <h5 class="b-footer__title">Ми у соцмережах</h5>
+                <ul class="f-social">
+                    <li class="f-social__item">
+                        <a href="#" rel="nofollow" target="_blank" class="f-social__link"><i class="icon-facebook"></i></a>
+                    </li>
+                    <li class="f-social__item">
+                        <a href="#" rel="nofollow" target="_blank" class="f-social__link"><i class="icon-twiter"></i></a>
+                    </li>
+                    <li class="f-social__item">
+                        <a href="#" rel="nofollow" target="_blank" class="f-social__link"><i class="icon-video"></i></a>
+                    </li>
+                    <li class="f-social__item">
+                        <a href="#" rel="nofollow" target="_blank" class="f-social__link"><i class="icon-gplus"></i></a>
+                    </li>
+                    <li class="f-social__item">
+                        <a href="#" rel="nofollow" target="_blank" class="f-social__link"><i class="icon-rss"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="b-footer__sole">
+            <p>Copyright © 2015-2017</p>
+        </div>
+    </footer>
+    <!--/FOOTER-->
+
+    <!--scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/app.min.js"></script>
+    <!--/scripts-->
+
+</body>
+</html>

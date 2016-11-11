@@ -98,7 +98,7 @@
         }
     }
     img{
-        margin: 0 0 1.5em 0;
+        margin: 0 0 0.5em 0;
     }
     .alignleft, img.alignleft {
 	    margin-right: 1.5em;
@@ -138,6 +138,9 @@
 @import "page/_panel.scss";
 @import "page/_partner.scss";
 @import "page/_gallery.scss";
+@import "page/_news.scss";
+@import "page/_pagination.scss";
 @import "page/_scroll-up.scss";
+@import "page/_google-map.scss";
 
 

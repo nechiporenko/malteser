@@ -11,10 +11,13 @@
     font-size:rem(32px);
 }
 .f-social__link{
+    display:block;
     color:#fff;
     text-decoration:none;
+    transition-property:color, transform;
 
     &:hover{
         color:$primary;
+        transform:translateY(-3px);
     }
 }

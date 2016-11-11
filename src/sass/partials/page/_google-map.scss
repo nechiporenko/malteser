@@ -1,0 +1,29 @@
+﻿@import "../../modules/_base.scss";
+/*Contacts Section*/
+.b-contacts{
+    color:$placeholder-color;
+
+    a{
+        color:inherit;
+
+        &:hover{
+            color:$primary;
+        }
+    }
+}
+/*Google Map Block*/
+.g-map{
+    height:300px;
+    margin-bottom:-35px;
+    background:$border-color;
+
+    .g-subtitle {
+        margin:0;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    @include media($tablet){
+        height:400px;
+    }
+}

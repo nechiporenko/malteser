@@ -3,12 +3,14 @@
 .page__scroll{
     @extend .g-clearbutton;
     @include size(50px);
+    border-radius:4px;
     line-height:50px;
-    color:$primary;
-    font-size:rem(44px);
+    color:#fff;
+    background:$primary;
+    font-size:rem(24px);
     position:fixed;
     right:10px;
-    bottom:15px;
+    bottom:10px;
     opacity:.5;
     transition-property:opacity, transform;
     z-index:1000;

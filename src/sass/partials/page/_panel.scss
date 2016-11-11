@@ -7,6 +7,14 @@
     box-sizing:border-box;
 
     &:hover{
+        .b-panel__icon{
+            &:before{
+                top:-5px;
+                right:-5px;
+                bottom:-5px;
+                left:-5px;
+            }
+        }
         .b-panel__svg{
             .st1{
                 fill:$primary;
@@ -28,6 +36,7 @@
     padding:65px 10px 14px;
     margin:50px auto 2*$project-line-height;
     position:relative;
+    z-index:1;
     background:#f5f5f5;
     @extend .g-shadow-hover;
 }
@@ -46,6 +55,18 @@
     left:50%;
     margin-left:-50px;
     background:#fff;
+
+    &:before{
+        content:'';
+        display:block;
+        border:3px dashed $primary;
+        position:absolute;
+        top:5px; right:5px; bottom:5px; left:5px;
+        border-radius:50%;
+        @extend .g-transition;
+        transition-property:all;
+        z-index:-1;
+    }
 }
 
 .b-panel__svg{

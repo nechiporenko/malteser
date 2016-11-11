@@ -1,0 +1,19 @@
+﻿@import "../../modules/_base.scss";
+/*Pagination*/
+.b-pagination{
+    margin:2*$project-line-height 0 $project-line-height;
+    text-align:center;
+    font-size:0;
+
+    a, span{
+        display:inline-block;
+        min-width:25px;
+        color:$primary-alt;
+        font-size:rem(18px);
+        text-decoration:none;
+    }
+
+    a:hover{
+        color:$primary;
+    }
+}

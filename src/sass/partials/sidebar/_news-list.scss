@@ -1,0 +1,26 @@
+﻿@import "../../modules/_base.scss";
+/*Sidebar news list*/
+.b-side-news{
+    list-style-type:none;
+    padding:0;
+}
+.b-side-news__item{
+    display:block;
+    margin-bottom:$project-line-height;
+}
+.b-side-news__entry{
+    font-size:rem(13px);
+    color:#bbb;
+}
+.b-side-news__title{
+    font-size:rem(14px);
+    text-transform:uppercase;
+    margin-bottom:$project-line-height/2;
+    color:$primary-alt;
+}
+.b-side-news__link{
+    @extend .b-news__link;
+}
+.b-side-news__more{
+    @extend .b-news__more;
+}

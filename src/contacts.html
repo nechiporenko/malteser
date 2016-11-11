@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="uk">
+<head>
+    <title>Malteser Contacts Page</title>
+    @@include('templates/head.html')
+</head>
+<body class="page">
+    <!--HEADER-->
+    @@include('templates/header.html')
+    <!--/HEADER-->
+	<!--MAIN CONTENT-->
+    <main class="page__content">
+       
+        <div class="page__section">
+            <div class="g-container">
+                <ol class="b-crumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+                    <li class="b-crumb__item" property="itemListElement" typeof="ListItem">
+                        <a href="index.html" class="b-crumb__link" property="item" typeof="WebPage">
+                            <span class="b-crumb__name" property="name">Головна</span>
+                            <meta property="position" content="1">
+                        </a>
+                    </li>
+                    <li class="b-crumb__item" property="itemListElement" typeof="ListItem">
+                        <span class="b-crumb__current" property="item" typeof="WebPage">
+                            <span class="b-crumb__name" property="name">Контакти</span>
+                            <meta property="position" content="2">
+                        </span>
+                    </li>
+                </ol>
+                <section class="page__entry">
+                    <h1 class="g-title">Контакти МСД м.Києва</h1>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
+                    <div class="b-contacts" itemscope="" itemtype="http://schema.org/Organization">
+                        <meta itemprop="name" content="Мальтійська Служба Допомоги, м.Київ" />
+                        <meta itemprop="description" content="Збереження віри та допомога потребуючим" />
+                        <div class="g-row">
+                            <div class="g-col g-col--one-third" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+                                <p>
+                                    <i class="icon-location"></i> <b>Адреса:</b>:
+                                </p>
+                                <p>
+                                    <span itemprop="postalCode">03148</span>,
+                                    <span itemprop="addressLocality">Київ</span>,
+                                    <span itemprop="streetAddress">
+                                        вул. Січневого Повстання, 17а/19
+                                    </span>
+                                    <meta itemprop="addressCountry" content="Україна" />
+                                </p>
+                            </div>
+                            <div class="g-col g-col--one-third">
+                                <p>
+                                    <i class="icon-phone"></i> <b>Телефон:</b>
+                                </p>
+                                <p>
+                                    <span itemprop="telephone">+380 50 224-24-14</span>
+                                </p>
+                            </div>
+                            <div class="g-col g-col--one-third">
+                                <p>
+                                    <i class="icon-mail"></i> <b>Email:</b>
+                                </p>
+                                <p>
+                                    <a href="mailto:malteser.kyiv@gmail.com">
+                                        <span itemprop="email">malteser.kyiv@gmail.com</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>                     
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <section class="page__section page-section--alt">
+            <div class="g-container">
+                <h2 class="g-subtitle g-text-center">Залишились питання?</h2>
+                <form class="page__inner">
+                    <div class="g-row">
+                        <div class="g-col g-col--one-half">
+                            <div class="g-fieldset">
+                                <label class="g-label">Ваше ім'я</label>
+                                <input type="text" class="g-input" placeholder="Як Вас звати?" />
+                            </div>
+                        </div>
+                        <div class="g-col g-col--one-half">
+                            <div class="g-fieldset">
+                                <label class="g-label">Ваш Email</label>
+                                <input type="email" class="g-input" placeholder="Щоб відповісти Вам. Спаму не буде" required />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="g-fieldset">
+                        <label class="g-label">Повідомлення</label>
+                        <textarea class="g-textarea" required placeholder="Текст повідомлення..."></textarea>
+                    </div>
+                    <button type="submit" class="g-btn g-btn--large">Надіслати повідомлення</button>
+                </form>
+            </div>
+        </section>
+        
+        <div class="g-map" id="map">
+
+        </div>
+
+        @@include('templates/mobile-menu.html')
+    </main>
+	<!--/MAIN CONTENT-->
+
+    <!--FOOTER-->
+    @@include('templates/footer.html')
+
+    <!--Google map script-->
+    <script>
+        jQuery(document).ready(function ($) {
+            function startGoogleMap() {
+                var map = $('#map');
+                if ($.inViewport(map)) {//если блок с картой сразу на экране
+                    initGoogleMap();//запускаем ее скрипт
+                } else {//если нет
+                    $(window).bind('scroll', checkInView); //отслеживаем скролл
+                }
+
+                function checkInView() {//когда промотали к секции с картой
+                    if ($.inViewport(map)) {
+                        $(window).unbind('scroll', checkInView);//отключили отслеживание скролла
+                        initGoogleMap();//запустили скрипты
+                    }
+                };
+            }
+
+            function initGoogleMap() {
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
+                    'callback=gmap_draw';
+
+                window.gmap_draw = function () {
+                    var map_lating = new google.maps.LatLng(50.463413, 30.508862),
+                        map_options = {
+                            zoom: 17,
+                            center: map_lating,
+                            panControl: false,
+                            zoomControl: true,
+                            scrollwheel: false,
+                            streetViewControl: false,
+                            scaleControl: true,
+                            mapTypeId: google.maps.MapTypeId.ROAD
+                        },
+                        map = new google.maps.Map(document.getElementById('map'), map_options),
+                        marker = new google.maps.Marker({
+                            position: map_lating,
+                            icon: "img/location.png",
+                            map: map
+                        }),
+                        info = new google.maps.InfoWindow({
+                            content: '<span class="g-subtitle">МСД</div>'
+                        });
+
+                    google.maps.event.addListener(marker, 'mouseover', function () {
+                        info.open(map, marker);
+                    });
+
+                    google.maps.event.addListener(marker, 'mouseout', function () {
+                        info.close(map, marker);
+                    });
+
+                    google.maps.event.addDomListener(window, 'resize', function () {
+                        var center = map.getCenter();
+                        google.maps.event.trigger(map, 'resize');
+                        map.setCenter(center);
+                    });
+                };
+
+                document.body.appendChild(script);
+            };
+
+            if ($('#map').length) {
+                startGoogleMap();
+            };
+        });
+    </script>
+    <!--/Google map script-->
+</body>
+</html>

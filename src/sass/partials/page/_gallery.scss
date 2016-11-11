@@ -26,6 +26,19 @@
     }
 }
 
+.b-gallery--sidebar{
+    .b-gallery__item{
+        @include media($tablet){
+            @include span-columns(12);
+        }
+
+        @include media($desktop){
+            @include span-columns(6);
+            @include omega(2n);
+        }
+    }
+}
+
 .b-gallery__link{
     display:block;
     text-decoration:none;
@@ -56,7 +69,7 @@
             transform:scale(1.05);
         }
         .b-gallery__entry{
-            transform:translateY(-60px);
+            transform:translateY(-40px);
         }
     }
 }
@@ -66,6 +79,7 @@
     margin:0 auto $project-line-height;
     position:relative;
     overflow:hidden;
+    @extend .g-shadow-hover;
 
     &:before{
         content:'';
@@ -98,18 +112,18 @@
     width:100%;
     padding:0 10px;
     position:absolute;
-    height:50px;
-    line-height:50px;
+    height:36px;
+    line-height:36px;
     white-space:nowrap;
     text-align:center;
     overflow:hidden;
     text-overflow:ellipsis;
     box-sizing:border-box;
     z-index:3;
-    bottom:-60px;
+    bottom:-40px;
     left:0;
-    background:$primary;
-    font-size:rem(14px);
+    @include linear-gradient(to right, $primary, lighten($primary, 12%));
+    font-size:rem(13px);
     @extend .g-transition;
     transition-property:transform;
 }
