@@ -1,7 +1,10 @@
 ﻿@import "../../modules/_base.scss";
 /*Contacts Section*/
 .b-contacts{
-    color:$placeholder-color;
+    color:$primary-alt;
+    [class^="icon-"], [class*=" icon-"]{
+        color:$primary;
+    }
 
     a{
         color:inherit;
@@ -11,6 +14,14 @@
         }
     }
 }
+
+.b-contacts__title{
+    display:block;
+    margin-bottom:$project-line-height/2;
+    font-size:rem(15px);
+    font-weight:600;
+}
+
 /*Google Map Block*/
 .g-map{
     height:300px;

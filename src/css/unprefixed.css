@@ -611,6 +611,7 @@ a, button {
 /* Buttons */
 .g-btn,
 .g-clearbutton,
+.g-alert__close,
 .h-search__btn,
 .b-header__mtoggl,
 .m-menu__toggle,
@@ -626,6 +627,7 @@ a, button {
 
 .g-btn:active,
 .g-clearbutton:active,
+.g-alert__close:active,
 .h-search__btn:active,
 .b-header__mtoggl:active,
 .m-menu__toggle:active,
@@ -633,7 +635,7 @@ a, button {
   transform: translateY(2px);
 }
 
-.g-clearbutton, .h-search__btn, .b-header__mtoggl, .m-menu__toggle, .page__scroll {
+.g-clearbutton, .g-alert__close, .h-search__btn, .b-header__mtoggl, .m-menu__toggle, .page__scroll {
   border: none;
   background: none;
   padding: 0;
@@ -873,6 +875,39 @@ input[type="radio"] {
   font-size: 0.6875rem;
   color: #e74c3c;
   font-style: italic;
+}
+
+.g-alert {
+  display: none;
+  margin: 18px 0;
+  padding: 25px 15px;
+  background: #2c3e50;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+}
+
+.g-alert p {
+  margin: 9px 0;
+}
+
+.g-alert.active {
+  display: block;
+}
+
+.g-alert__close {
+  border: none;
+  font-size: 1.125rem;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+
+.g-alert__close:hover {
+  color: #da251c;
 }
 
 @font-face {
@@ -1247,7 +1282,7 @@ input[type="radio"] {
 .h-logo__inner {
   margin: 0 15px 0 0;
   height: 100%;
-  padding: 0 0 0 50px;
+  padding: 0 0 0 35px;
   position: relative;
 }
 
@@ -1269,15 +1304,18 @@ input[type="radio"] {
 }
 
 .h-logo__entry {
-  display: none;
   padding: 4px 0;
   font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.2;
 }
 
+.h-logo__name--xl {
+  display: none;
+}
+
 .h-logo__city {
-  display: block;
+  display: none;
   font-weight: 400;
 }
 
@@ -1289,7 +1327,16 @@ input[type="radio"] {
   .h-logo__thumb, .f-logo__thumb {
     width: 41px;
   }
-  .h-logo__entry {
+  .h-logo__inner {
+    padding-left: 50px;
+  }
+  .h-logo__name--xs {
+    display: none;
+  }
+  .h-logo__name--xl {
+    display: inline;
+  }
+  .h-logo__city {
     display: block;
   }
 }
@@ -2532,7 +2579,11 @@ a.b-panel__subtitle:hover {
 
 /*Contacts Section*/
 .b-contacts {
-  color: #7f8c8d;
+  color: #2c3e50;
+}
+
+.b-contacts [class^="icon-"], .b-contacts [class*=" icon-"] {
+  color: #da251c;
 }
 
 .b-contacts a {
@@ -2541,6 +2592,13 @@ a.b-panel__subtitle:hover {
 
 .b-contacts a:hover {
   color: #da251c;
+}
+
+.b-contacts__title {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 0.9375rem;
+  font-weight: 600;
 }
 
 /*Google Map Block*/

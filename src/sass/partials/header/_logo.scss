@@ -10,7 +10,7 @@
 .h-logo__inner{
     margin:0 15px 0 0;
     height:100%;
-    padding:0 0 0 50px;
+    padding:0 0 0 35px;
     position:relative;
 }
 .h-logo__thumb{
@@ -28,14 +28,18 @@
 }
 
 .h-logo__entry{
-    display:none;
     padding:4px 0;
     font-size:rem(15px);
     font-weight:600;
     line-height:1.2;
 }
+
+.h-logo__name--xl{
+    display:none;
+}
+
 .h-logo__city{
-    display:block;
+    display:none;
     font-weight:400;
 }
 
@@ -47,7 +51,18 @@
     .h-logo__thumb{
         width:41px;
     }
-    .h-logo__entry{
+
+    .h-logo__inner{
+        padding-left:50px;
+    }
+
+    .h-logo__name--xs{
+        display:none;
+    }
+    .h-logo__name--xl{
+        display:inline;
+    }
+    .h-logo__city{
         display:block;
     }
 }

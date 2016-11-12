@@ -7,6 +7,7 @@
 //Кнопка скролла страницы
 //Hero Slider
 //Лайтбокс
+//Скроем сообщение об успешной отправке формы
 
 jQuery(document).ready(function ($) {
     $('html').removeClass('no-js').addClass('js');
@@ -371,4 +372,9 @@ jQuery(document).ready(function ($) {
     if ($('.js-gallery').length) {
         initGallery();
     }
+
+    //Скроем сообщение об успешной отправке формы
+    $('.g-alert').on('click', '.g-alert__close', function () {
+        $(this).parent().removeClass('active');
+    });
 });

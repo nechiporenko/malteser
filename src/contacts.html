@@ -36,9 +36,9 @@
                         <meta itemprop="description" content="Збереження віри та допомога потребуючим" />
                         <div class="g-row">
                             <div class="g-col g-col--one-third" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-                                <p>
-                                    <i class="icon-location"></i> <b>Адреса:</b>:
-                                </p>
+                                <span class="b-contacts__title">
+                                    <i class="icon-location"></i> Адреса:
+                                </span>
                                 <p>
                                     <span itemprop="postalCode">03148</span>,
                                     <span itemprop="addressLocality">Київ</span>,
@@ -49,17 +49,17 @@
                                 </p>
                             </div>
                             <div class="g-col g-col--one-third">
-                                <p>
-                                    <i class="icon-phone"></i> <b>Телефон:</b>
-                                </p>
+                                <span class="b-contacts__title">
+                                    <i class="icon-phone"></i> Телефон:
+                                </span>
                                 <p>
                                     <span itemprop="telephone">+380 50 224-24-14</span>
                                 </p>
                             </div>
                             <div class="g-col g-col--one-third">
-                                <p>
-                                    <i class="icon-mail"></i> <b>Email:</b>
-                                </p>
+                                <span class="b-contacts__title">
+                                    <i class="icon-mail"></i> Email:
+                                </span>
                                 <p>
                                     <a href="mailto:malteser.kyiv@gmail.com">
                                         <span itemprop="email">malteser.kyiv@gmail.com</span>
@@ -79,20 +79,27 @@
                     <div class="g-row">
                         <div class="g-col g-col--one-half">
                             <div class="g-fieldset">
-                                <label class="g-label">Ваше ім'я</label>
-                                <input type="text" class="g-input" placeholder="Як Вас звати?" />
+                                <label class="g-label">Ваше ім'я*</label>
+                                <input type="text" class="g-input" placeholder="Як Вас звати?" required />
                             </div>
                         </div>
                         <div class="g-col g-col--one-half">
                             <div class="g-fieldset">
-                                <label class="g-label">Ваш Email</label>
+                                <label class="g-label">Ваш Email*</label>
                                 <input type="email" class="g-input" placeholder="Щоб відповісти Вам. Спаму не буде" required />
                             </div>
                         </div>
                     </div>
                     <div class="g-fieldset">
-                        <label class="g-label">Повідомлення</label>
+                        <label class="g-label">Повідомлення*</label>
                         <textarea class="g-textarea" required placeholder="Текст повідомлення..."></textarea>
+                    </div>
+                    <div class="g-alert">
+                        <p>Ваше повідомлення надіслано. Дякуємо!</p>
+                        <p>Ми відповімо Вам як найшвидше!</p>
+                        <button type="button" class="g-alert__close">
+                            <i class="icon-close"></i>
+                        </button>
                     </div>
                     <button type="submit" class="g-btn g-btn--large">Надіслати повідомлення</button>
                 </form>
