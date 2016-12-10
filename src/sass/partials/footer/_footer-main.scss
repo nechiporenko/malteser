@@ -25,6 +25,8 @@
     line-height:46px;
     margin-bottom:15px;
     white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
     font-size:rem(18px);
     text-transform:uppercase;
     text-shadow:0 0 1px rgba(#000, .7);

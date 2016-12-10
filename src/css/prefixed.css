@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*Normalize*/
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&subset=cyrillic");
 html {
@@ -200,10 +199,9 @@ input[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-input[type='search'] {
+/*input[type='search'] {
   box-sizing: content-box;
-}
-
+}*/
 input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -444,7 +442,7 @@ hr {
 /* Transitions */
 .g-transition, a, button, .g-shadow-hover, .b-panel--has-icon, .b-panel--alt, .b-gallery__inner, .b-news__thumb, .b-photo__link, .b-taglist a, .g-btn:before, .g-input, .h-search__input,
 .g-select,
-.g-textarea, .h-action__icon, .b-header__mtoggl [class^="icon-"], .b-header__mtoggl [class*=" icon-"], .h-menu__sub-menu, .m-menu__toggle [class^="icon-"], .m-menu__toggle [class*=" icon-"], .b-panel__icon:before, .b-panel__svg .st1, .b-panel__title, .b-panel__thumb:after, .b-gallery__link:after, .b-photo__link:after, .b-gallery__inner:after, .b-gallery__img, .b-gallery__entry, .b-news__thumblink:before, .b-news__thumblink:after, .b-news__img, .b-news__more:before, .b-side-news__more:before, .b-photo__link:before, .bx-controls-direction a, .sl-wrapper button {
+.g-textarea, .h-action__icon, .b-header__mtoggl [class^="icon-"], .b-header__mtoggl [class*=" icon-"], .h-menu__sub-menu, .m-menu__toggle [class^="icon-"], .m-menu__toggle [class*=" icon-"], .b-panel__icon:before, .b-panel__svg .st1, .b-panel__title, .b-panel__thumb:after, .b-partner__img, .b-gallery__link:after, .b-photo__link:after, .b-gallery__inner:after, .b-gallery__img, .b-gallery__entry, .b-news__thumblink:before, .b-news__thumblink:after, .b-news__img, .b-news__more:before, .b-side-news__more:before, .b-photo__link:before, .bx-controls-direction a, .sl-wrapper button {
   -webkit-transition-duration: .2s;
           transition-duration: .2s;
   -webkit-transition-timing-function: ease-in;
@@ -546,6 +544,7 @@ a, button {
   max-width: 1160px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
   padding: 0 10px;
   box-sizing: border-box;
 }
@@ -558,19 +557,19 @@ a, button {
 
 @media screen and (min-width: 768px) {
   .g-container, .page__inner, .b-footer__main {
-    width: 750px;
+    max-width: 750px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .g-container, .page__inner, .b-footer__main {
-    width: 970px;
+    max-width: 970px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .g-container, .page__inner, .b-footer__main {
-    width: 100%;
+    max-width: 1160px;
   }
 }
 
@@ -709,6 +708,12 @@ a, button {
           transform: none;
 }
 
+.g-btn:disabled:before {
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
 .g-btn--large {
   height: 50px;
   line-height: 50px;
@@ -737,7 +742,7 @@ textarea {
   display: inline-block;
   vertical-align: middle;
   width: 100%;
-  margin-bottom: 18px;
+  margin-bottom: 36px;
   padding: 6px 10px;
   background-color: #fff;
   border: 1px solid #E0E0E0;
@@ -896,11 +901,16 @@ input[type="radio"] {
 
 .g-fieldset__msg {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 10px;
+  bottom: 18px;
   font-size: 0.6875rem;
   color: #e74c3c;
   font-style: italic;
+  display: none;
+}
+
+.error > .g-fieldset__msg {
+  display: block;
 }
 
 .g-alert {
@@ -924,6 +934,10 @@ input[type="radio"] {
   display: block;
 }
 
+.g-alert--wrong {
+  background: #da251c;
+}
+
 .g-alert__close {
   border: none;
   font-size: 1.125rem;
@@ -934,6 +948,21 @@ input[type="radio"] {
 
 .g-alert__close:hover {
   color: #da251c;
+}
+
+.g-recaptcha {
+  margin-bottom: 18px;
+}
+
+@media screen and (max-height: 575px) {
+  #rc-imageselect, .g-recaptcha {
+    -webkit-transform: scale(0.77);
+        -ms-transform: scale(0.77);
+            transform: scale(0.77);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
 }
 
 @font-face {
@@ -1160,6 +1189,7 @@ input[type="radio"] {
 
 .h-lang__item--active > .h-lang__link {
   cursor: default;
+  color: #fcfcfc !important;
 }
 
 /*Header search form*/
@@ -1460,6 +1490,11 @@ input[type="radio"] {
   cursor: default;
 }
 
+.h-menu__item--parent--active > .h-menu__link,
+.h-menu__item--ancestor--active > .h-menu__link {
+  color: #da251c;
+}
+
 .h-menu__sub-menu {
   display: none;
   width: 100%;
@@ -1499,7 +1534,7 @@ input[type="radio"] {
   color: #da251c;
 }
 
-.h-menu__sub-menu__item--active > .h-menu__sub-menu__link {
+.h-menu__item--active > .h-menu__sub-menu__link {
   color: #da251c;
   cursor: default;
 }
@@ -1572,6 +1607,11 @@ input[type="radio"] {
   text-decoration: none;
 }
 
+.m-menu__item--active > .m-menu__link, .m-menu__item--active >
+.m-menu__sub-menu__link {
+  color: #da251c;
+}
+
 .m-menu__link {
   text-transform: uppercase;
   white-space: nowrap;
@@ -1579,16 +1619,8 @@ input[type="radio"] {
   text-overflow: ellipsis;
 }
 
-.m-menu__item--active > .m-menu__link {
-  color: #da251c;
-}
-
 .m-menu__sub-menu__link {
   padding-left: 20px;
-}
-
-.m-menu__sub-menu__item--active > .m-menu__sub-menu__link {
-  color: #da251c;
 }
 
 .m-menu__label {
@@ -1829,7 +1861,7 @@ input[type="radio"] {
 }
 
 .b-crumb__item:after {
-  content: '»';
+  content: '/';
   margin-left: 5px;
 }
 
@@ -2140,6 +2172,16 @@ a.b-panel__subtitle:hover {
   vertical-align: middle;
   margin: 18px 9px;
   text-decoration: none;
+}
+
+.b-partner__link:hover .b-partner__img {
+  -webkit-filter: grayscale(10%);
+  filter: grayscale(10%);
+}
+
+.b-partner__img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 /*Gallery*/
@@ -2636,6 +2678,10 @@ a.b-panel__subtitle:hover {
   text-decoration: none;
 }
 
+.b-pagination a.current, .b-pagination span.current {
+  color: #da251c;
+}
+
 .b-pagination a:hover {
   color: #da251c;
 }
@@ -2832,6 +2878,8 @@ a.b-panel__subtitle:hover {
   line-height: 46px;
   margin-bottom: 15px;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 1.125rem;
   text-transform: uppercase;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.7);

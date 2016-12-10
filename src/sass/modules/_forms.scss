@@ -21,7 +21,7 @@ textarea {
     display:inline-block;
     vertical-align:middle;
     width:100%;
-    margin-bottom: $project-line-height;
+    margin-bottom: 2*$project-line-height;
     padding:6px 10px;
     background-color: #fff;
     border: 1px solid $border-color;
@@ -97,11 +97,16 @@ input[type="radio"] {
 
 .g-fieldset__msg{
     position:absolute;
-    left:0;
-    bottom:0;
+    left:10px;
+    bottom:$project-line-height;
     font-size:rem(11px);
     color:$error-color;
     font-style:italic;
+    display:none;
+
+    .error > &{
+        display:block;
+    }
 }
 
 .g-alert{
@@ -125,6 +130,10 @@ input[type="radio"] {
     }
 }
 
+.g-alert--wrong{
+    background:$primary;
+}
+
 .g-alert__close{
     @extend .g-clearbutton;
     border:none;
@@ -134,6 +143,17 @@ input[type="radio"] {
 
     &:hover{
         color:$primary;
+    }
+}
+
+//google re-captcha
+.g-recaptcha{
+    margin-bottom:$project-line-height;
+}
+@include media(max-height 575px){
+    #rc-imageselect, .g-recaptcha{
+        transform:scale(0.77);
+        transform-origin:0 0;
     }
 }
 

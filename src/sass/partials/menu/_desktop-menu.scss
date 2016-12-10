@@ -43,6 +43,11 @@
         color:$primary;
         cursor:default;
     }
+
+    .h-menu__item--parent--active > &,
+    .h-menu__item--ancestor--active > &{
+        color:$primary
+    }
 }
 
 .h-menu__sub-menu{
@@ -79,7 +84,7 @@
         color:$primary;
     }
 
-    .h-menu__sub-menu__item--active > &{
+    .h-menu__item--active > &{
         color:$primary;
         cursor:default;
     }

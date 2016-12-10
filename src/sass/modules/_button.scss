@@ -64,6 +64,10 @@
         background:grey;
         box-shadow:none;
         transform:none;
+
+        &:before{
+            transform:scaleX(0);
+        }
     }
 }
 

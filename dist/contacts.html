@@ -26,7 +26,7 @@
                 <!--/lang switcher-->
                 <!--search form-->
                 <form class="h-search">
-                    <input type="text" name="s" id="s" class="h-search__input" placeholder="Шукати..." />
+                    <input type="search" name="s" id="s" class="h-search__input" placeholder="Шукати..." />
                     <button type="submit" class="h-search__btn">
                         <i class="icon-search"></i>
                     </button>
@@ -203,24 +203,27 @@
         <section class="page__section page-section--alt">
             <div class="g-container">
                 <h2 class="g-subtitle g-text-center">Залишились питання?</h2>
-                <form class="page__inner">
+                <form class="page__inner" id="cform">
                     <div class="g-row">
                         <div class="g-col g-col--one-half">
                             <div class="g-fieldset">
                                 <label class="g-label">Ваше ім'я*</label>
-                                <input type="text" class="g-input" placeholder="Як Вас звати?" required />
+                                <input type="text" class="g-input js-validate js-validate--required" placeholder="Як Вас звати?" required />
+                                <span class="g-fieldset__msg">Заповніть це поле!</span>
                             </div>
                         </div>
                         <div class="g-col g-col--one-half">
                             <div class="g-fieldset">
                                 <label class="g-label">Ваш Email*</label>
-                                <input type="email" class="g-input" placeholder="Щоб відповісти Вам. Спаму не буде" required />
+                                <input type="email" class="g-input js-validate js-validate--email" placeholder="Щоб відповісти Вам. Спаму не буде" required />
+                                <span class="g-fieldset__msg">Вкажіть корректний email!</span>
                             </div>
                         </div>
                     </div>
                     <div class="g-fieldset">
                         <label class="g-label">Повідомлення*</label>
-                        <textarea class="g-textarea" required placeholder="Текст повідомлення..."></textarea>
+                        <textarea class="g-textarea js-validate js-validate--required" placeholder="Текст повідомлення..." required></textarea>
+                        <span class="g-fieldset__msg">Заповніть це поле!</span>
                     </div>
                     <div class="g-alert">
                         <p>Ваше повідомлення надіслано. Дякуємо!</p>
@@ -382,75 +385,10 @@
 
 
     <!--Google map script-->
-    <script>
-        jQuery(document).ready(function ($) {
-            function startGoogleMap() {
-                var map = $('#map');
-                if ($.inViewport(map)) {//если блок с картой сразу на экране
-                    initGoogleMap();//запускаем ее скрипт
-                } else {//если нет
-                    $(window).bind('scroll', checkInView); //отслеживаем скролл
-                }
-
-                function checkInView() {//когда промотали к секции с картой
-                    if ($.inViewport(map)) {
-                        $(window).unbind('scroll', checkInView);//отключили отслеживание скролла
-                        initGoogleMap();//запустили скрипты
-                    }
-                };
-            }
-
-            function initGoogleMap() {
-                var script = document.createElement('script');
-                script.type = 'text/javascript';
-                script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
-                    'callback=gmap_draw';
-
-                window.gmap_draw = function () {
-                    var map_lating = new google.maps.LatLng(50.463413, 30.508862),
-                        map_options = {
-                            zoom: 17,
-                            center: map_lating,
-                            panControl: false,
-                            zoomControl: true,
-                            scrollwheel: false,
-                            streetViewControl: false,
-                            scaleControl: true,
-                            mapTypeId: google.maps.MapTypeId.ROAD
-                        },
-                        map = new google.maps.Map(document.getElementById('map'), map_options),
-                        marker = new google.maps.Marker({
-                            position: map_lating,
-                            icon: "img/location.png",
-                            map: map
-                        }),
-                        info = new google.maps.InfoWindow({
-                            content: '<span class="g-subtitle">МСД</div>'
-                        });
-
-                    google.maps.event.addListener(marker, 'mouseover', function () {
-                        info.open(map, marker);
-                    });
-
-                    google.maps.event.addListener(marker, 'mouseout', function () {
-                        info.close(map, marker);
-                    });
-
-                    google.maps.event.addDomListener(window, 'resize', function () {
-                        var center = map.getCenter();
-                        google.maps.event.trigger(map, 'resize');
-                        map.setCenter(center);
-                    });
-                };
-
-                document.body.appendChild(script);
-            };
-
-            if ($('#map').length) {
-                startGoogleMap();
-            };
-        });
-    </script>
+    <script src="js/map.min.js"></script>
     <!--/Google map script-->
+    <!--Contact form script-->
+    <script src="js/contactForm.js"></script>
+    <!--/Contact form script-->
 </body>
 </html>

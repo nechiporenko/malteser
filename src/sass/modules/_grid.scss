@@ -2,18 +2,19 @@
 /*Grid*/
 .g-container {
     @include outer-container();
+    width:100%;
     padding:0 10px;
     box-sizing:border-box;
 
     @include media($tablet){
-        width:750px;
+        max-width:750px;
     }
 
     @include media($desktop){
-        width:970px;
+        max-width:970px;
     }
     @include media($large){
-        width:100%;
+        max-width:1160px;
     }
 }
 

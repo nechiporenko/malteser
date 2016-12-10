@@ -63,6 +63,10 @@
     line-height:1.15;
     font-size:rem(14px);
     text-decoration:none;
+
+    .m-menu__item--active > &{
+        color:$primary;
+    }
 }
 
 .m-menu__link{
@@ -70,17 +74,10 @@
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
-
-    .m-menu__item--active > &{
-        color:$primary;
-    }
 }
 
 .m-menu__sub-menu__link{
     padding-left:20px;
-    .m-menu__sub-menu__item--active > &{
-        color:$primary;
-    }
 }
 
 .m-menu__label{//заголовок меню

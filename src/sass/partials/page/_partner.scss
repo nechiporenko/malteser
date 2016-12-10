@@ -10,4 +10,15 @@
     vertical-align:middle;
     margin:$project-line-height $project-line-height/2;
     text-decoration:none;
+
+    &:hover{
+        .b-partner__img{
+            @include filter(grayscale(10%));
+        }
+    }
+}
+
+.b-partner__img{
+    @include filter(grayscale(100%));
+    @extend .g-transition;
 }

@@ -11,6 +11,10 @@
         color:$primary-alt;
         font-size:rem(18px);
         text-decoration:none;
+
+        &.current{
+            color:$primary;
+        }
     }
 
     a:hover{
