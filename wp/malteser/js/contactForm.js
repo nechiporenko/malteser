@@ -58,6 +58,7 @@
     };
 
     var $form = $('#cform');
+    var request;
 
     $form.on('click', '.g-alert__close', function () {
         $(this).parents('.g-alert').hide();
@@ -92,6 +93,7 @@
                         $form.find('.g-select option:first-child').attr('selected', true);
                         grecaptcha.reset();
                         $form.find('.g-alert--ok').show();
+                        postToGoogle(cf_name, cf_mail, cf_msg);
                     }
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
@@ -105,4 +107,37 @@
             });
         }
     });
+
+    function postToGoogle(name, mail, msg) {
+        // Abort any pending request
+        if (request) {
+            request.abort();
+        }
+        // Fire off the request to /form.php
+        request = $.ajax({
+            url: "https://script.google.com/macros/s/AKfycbz-k8SV7H-fsXo8lbEe9ieHh4heYDdz1zJC1HgBVff5saZIPObU/exec",
+            type: "POST",
+            data: {
+                "name": name,
+                "mail": mail,
+                "msg": msg
+            }
+        });
+
+        // Callback handler that will be called on success
+        request.done(function (response, textStatus, jqXHR) {
+            /*console.log("Hooray, it worked!");
+            console.log(response);
+            console.log(textStatus);
+            console.log(jqXHR);*/
+        });
+
+        // Callback handler that will be called on failure
+        request.fail(function (jqXHR, textStatus, errorThrown) {
+            /*console.error(
+                "The following error occurred: " +
+                textStatus, errorThrown
+            );*/
+        });
+    }
 });

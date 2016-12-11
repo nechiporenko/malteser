@@ -58,6 +58,7 @@
     };
 
     var $form = $('#oform');
+    var request;
 
     $form.on('click', '.g-alert__close', function () {
         $(this).parents('.g-alert').hide();
@@ -93,10 +94,10 @@
                         alert(data['error']);
                     } else {
                         $form.find('.g-input, .g-textarea').val('');
-                        $form.find('.g-select option:first-child').attr('selected', true);
+                        $form.find('.g-select').prop('selectedIndex', 0);
                         grecaptcha.reset();
                         $form.find('.g-alert--ok').show();
-                        //postToGoogle();
+                        postToGoogle(of_name, of_mail, of_service, of_phone, of_msg);
                     }
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
@@ -111,24 +112,38 @@
         }
     });
 
-    //function postToGoogle() {
-    //    $.ajax({
-    //        url: "https://docs.google.com/forms/d/e/1FAIpQLSc5U_v-qPJHXqrjwjPxbjFMBdqQaUUCAD57FuDQcem2Dg_6Vw/formResponse",
-    //        data: {
-    //            "entry.1940952942": $('#of_name').val().trim(),
-    //            "entry.174072603": $('#of_mail').val().trim(),
-    //            "entry.2121242962": $('#of_service').val().trim(),
-    //            "entry.443306626": $('#of_phone').val().trim(),
-    //            "entry.1147822336": $('#of_msg').val().trim()
-    //        },
-    //        type: "POST",
-    //        dataType: "jsonp",
-    //        statusCode: {
-    //            200: function () {
-    //                console.log('Sent to Google Docs');
-    //            }
-    //        }
-    //    });
-    //    return false;
-    //};
+    function postToGoogle(name, mail, service, phone, msg) {
+        // Abort any pending request
+        if (request) {
+            request.abort();
+        }
+        // Fire off the request to /form.php
+        request = $.ajax({
+            url: "https://script.google.com/macros/s/AKfycbw2i9YRLKVGqeNDiuRze0Da4_eYE4fqYu8CM83Y4LTVbvKiwpq4/exec",
+            type: "POST",
+            data: {
+                "name": name,
+                "mail": mail,
+                "service": service,
+                "phone": phone,
+                "msg": msg
+            }
+        });
+
+        // Callback handler that will be called on success
+        request.done(function (response, textStatus, jqXHR) {
+            console.log("Hooray, it worked!");
+            console.log(response);
+            console.log(textStatus);
+            console.log(jqXHR);
+        });
+
+        // Callback handler that will be called on failure
+        request.fail(function (jqXHR, textStatus, errorThrown) {
+            console.error(
+                "The following error occurred: " +
+                textStatus, errorThrown
+            );
+        });
+    }
 });
