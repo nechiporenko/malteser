@@ -39,9 +39,9 @@
 				while ( $query->have_posts() ) {
 					$query->the_post();
 		?>
-			<h4 class="g-title g-title--alt">
+			<h2 class="g-title g-title--alt">
 				<?php the_title(); ?>
-			</h4>
+			</h2>
 			<?php the_content(); ?>
 			<a href="<?php echo get('block_link'); ?>" class="g-btn">
 				<?php pll_e( 'Send order' ); ?>
@@ -56,11 +56,11 @@
 	<!--/order-->
 	
 	<!--news-->
-	<section class="page__section">
+	<div class="page__section">
 		<div class="g-container">
-			<h4 class="g-title g-title--alt">
+			<span class="g-title g-title--alt">
 				<?php pll_e( 'Last news' ); ?>
-			</h4>
+			</span>
 			<div class="g-row">
 			<?php
 				$args = array(
@@ -79,7 +79,7 @@
 			?>
 			</div><!--/.g-row-->
 		</div>
-	</section>
+	</div>
 	<!--/news-->
 </div>
 <?php

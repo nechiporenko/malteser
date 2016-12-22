@@ -39,6 +39,7 @@ remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
 // removes oembed discorvery link
 remove_action( 'wp_head', 'rest_output_link_wp_head');
 remove_action( 'wp_head', 'wp_oembed_add_discovery_links');
+remove_action( 'wp_head', 'wp_oembed_add_host_js' );
 
 // Remove emoji script & dns-prefetch link
 remove_action('wp_head', 'wp_resource_hints', 2);

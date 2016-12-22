@@ -4,6 +4,7 @@
     padding:15px 0 35px;
     font-size:rem($project-font-size);
     line-height:strip-units($project-line-height/$project-font-size);
+    
 
     @include media($desktop){
         min-height:400px;

@@ -1,9 +1,9 @@
 <!--sidebar-->
 <aside class="g-col g-col--one-third">
-	<h4 class="g-subtitle g-subtitle--alt">
+	<span class="g-subtitle g-subtitle--alt">
 		<i class="icon-news"></i>
 		<?php pll_e( 'Last news' ); ?>
-	</h4>
+	</span>
 	<?php
 		if ( is_single() ){
 			$args = array(
@@ -47,10 +47,10 @@
 		wp_reset_postdata();
 	?>
 	
-	<h4 class="g-subtitle g-subtitle--alt">
+	<span class="g-subtitle g-subtitle--alt">
 		<i class="icon-pictures"></i>
 		<?php pll_e( 'Last photos' ); ?>
-	</h4>
+	</span>
 	<?php
 		$args = array(
 			'post_type' => 'gallery',

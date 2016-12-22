@@ -34,7 +34,7 @@ if($_POST){
 			die();
 		}
 		//send data to email
-		$to = array("s.nechiporenko@gmail.com");
+		$to = array("s.nechiporenko@gmail.com", "malteser.kyiv@gmail.com");
 		$what = "<p>З сайту надійшло нове повідомлення!</p>";
 		$what .= "<p>Ім'я: " . $name . "</p>";
 		$what .= "<p>Эл. пошта: " . $email . "</p>";

@@ -217,7 +217,28 @@ jQuery(document).ready(function ($) {
         }
 
         method.init = function () {
-            $menu.find('li').filter(':first').before('<li class="m-menu__item"><label class="m-menu__label">Menu</label></li>');
+            var labelText,
+                linkHref,
+                linkText,
+                lang = 'uk';
+            if ($menu.hasClass('js-lang-pl')) {
+                lang = 'pl';
+            }
+            
+            switch (lang) {
+                case "uk":
+                    labelText = 'Меню';
+                    linkHref = '/';
+                    linkText = 'Головна';
+                    break;
+                case "pl":
+                    labelText = 'Menu';
+                    linkHref = '/pl/';
+                    linkText = 'Dom';
+                    break;
+            }
+
+            $menu.find('li').filter(':first').before('<li class="m-menu__item"><label class="m-menu__label">'+ labelText +'</label></li><li class="m-menu__item"><a href="'+ linkHref +'" class="m-menu__link">'+ linkText +'</a></li>');
             $menu.find('li').has('ul').addClass('has-menu').append('<button type="button" class="m-menu__toggle"><i class="icon-down"></i></button>');
 
             $('.js-header').on('click', '.js-mtoggl', function () {//покажем - спрячем панель моб.меню

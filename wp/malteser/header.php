@@ -4,8 +4,8 @@
     <title><?php echo wp_get_document_title(); ?></title>
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.min.css?ver=0.0.3">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.min.css?ver=0.0.7">
     <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>

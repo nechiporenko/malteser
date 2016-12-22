@@ -196,11 +196,11 @@
 	<!--/what we do-->
 	
 	<!--photos-->
-	<section class="page__section">
+	<div class="page__section">
 		<div class="g-container">
-			<h4 class="g-title g-title--alt">
+			<span class="g-title g-title--alt">
 				<?php pll_e( 'Last photos' ); ?>
-			</h4>
+			</span>
 			<?php
 				$args = array(
 					'post_type' => 'gallery',
@@ -234,7 +234,7 @@
 				</a>
 			</div>
 		</div>
-	</section>
+	</div>
 	<!--/photos-->
 </div>
 <?php

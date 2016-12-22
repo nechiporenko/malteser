@@ -1,9 +1,9 @@
 <!--sidebar-->
 <aside class="g-col g-col--one-third">
-	<h4 class="g-subtitle g-subtitle--alt">
+	<span class="g-subtitle g-subtitle--alt">
 		<i class="icon-tag"></i>
 		<?php pll_e( 'Categories' ); ?>
-	</h4>
+	</span>
 	<?php
 		$categories = get_categories();
 		if( $categories ){
@@ -23,10 +23,10 @@
 	<?php
 		} //end if
 	?>
-	<h4 class="g-subtitle g-subtitle--alt">
+	<span class="g-subtitle g-subtitle--alt">
 		<i class="icon-tags"></i>
 		<?php pll_e( 'Tags' ); ?>
-	</h4>
+	</span>
 	<?php
 		$tags = get_tags();
 		if( $tags ){
@@ -46,10 +46,10 @@
 	<?php
 		} //end if
 	?>
-	<h4 class="g-subtitle g-subtitle--alt">
+	<span class="g-subtitle g-subtitle--alt">
 		<i class="icon-pictures"></i>
 		<?php pll_e( 'Last photos' ); ?>
-	</h4>
+	</span>
 	<?php
 		$args = array(
 			'post_type' => 'gallery',

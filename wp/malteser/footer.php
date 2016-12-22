@@ -1,5 +1,11 @@
 		<!--mobile menu-->
-		<nav class="page__panel js-mmenu">
+		<?php
+			$lang_menu_class = 'js-lang-uk';
+			if ( pll_current_language() != 'uk' ){ 
+				$lang_menu_class = 'js-lang-pl';
+			}
+		?>
+		<nav class="page__panel js-mmenu <?php echo $lang_menu_class; ?>">
 			<?php bem_menu('main', 'm-menu'); ?>
 		</nav>
 		<!--/mobile menu-->  
@@ -46,11 +52,11 @@
                 <?php get_template_part( 'template-parts/footer', 'contacts' ); ?>
             </div>
             <nav class="b-footer__col">
-                <h5 class="b-footer__title"><?php pll_e( 'Footer title1' ); ?></h5>
+                <span class="b-footer__title"><?php pll_e( 'Footer title1' ); ?></span>
                 <?php bem_menu('footer', 'f-menu'); ?>
             </nav>
             <nav class="b-footer__col">
-                <h5 class="b-footer__title"><?php pll_e( 'Footer title2' ); ?></h5>
+                <span class="b-footer__title"><?php pll_e( 'Footer title2' ); ?></span>
                 <ul class="f-menu">
 				<?php
 					if ( is_single() ){
@@ -85,7 +91,7 @@
                 </ul>
             </nav>
             <div class="b-footer__col">
-                <h5 class="b-footer__title"><?php pll_e( 'Footer title3' ); ?></h5>
+                <span class="b-footer__title"><?php pll_e( 'Footer title3' ); ?></span>
                 <ul class="f-social">
 					<?php get_template_part( 'template-parts/footer', 'social' ); ?>
                 </ul>
@@ -100,7 +106,7 @@
     <!--scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="<?php bloginfo('template_directory'); ?>/js/app.min.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/app.min.js?ver=0.0.1"></script>
     <?php
 		if( is_page_template('tmpl-contacts.php') ){
 	?>

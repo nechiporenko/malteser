@@ -332,11 +332,11 @@
 <!--/volunteer-->
 	
 <!--team-->
-<section class="page__section">
+<div class="page__section">
 	<div class="g-container">
-		<h3 class="g-title g-title--alt">
+		<span class="g-title g-title--alt">
 			<?php pll_e( 'Our team' ); ?>
-		</h3>
+		</span>
 		<div class="g-row">
 		<?php
 			$args = array(
@@ -383,15 +383,15 @@
 			</a>
 		</div>
 	</div>
-</section>
+</div>
 <!--/team-->
 
 <!--news-->
-<section class="page__section">
+<div class="page__section">
 	<div class="g-container">
-		<h4 class="g-title g-title--alt">
+		<span class="g-title g-title--alt">
 			<?php pll_e( 'Last news' ); ?>
-		</h4>
+		</span>
 		<div class="g-row">
 		<?php
 			$args = array(
@@ -410,7 +410,7 @@
 		?>
 		</div><!--/.g-row-->
 	</div>
-</section>
+</div>
 <!--/news-->
 
 <!--order-->
@@ -445,11 +445,11 @@
 <!--/order-->
 
 <!--photos-->
-<section class="page__section">
+<div class="page__section">
 	<div class="g-container">
-		<h4 class="g-title g-title--alt">
+		<span class="g-title g-title--alt">
 			<?php pll_e( 'Last photos' ); ?>
-		</h4>
+		</span>
 		<?php
 			$args = array(
 				'post_type' => 'gallery',
@@ -483,15 +483,15 @@
 			</a>
 		</div>
 	</div>
-</section>
+</div>
 <!--/photos-->
 
 <!--partners-->
-<section class="page__section">
+<div class="page__section">
 	<div class="g-container">
-		<h4 class="g-title g-title--alt">
+		<span class="g-title g-title--alt">
 			<?php pll_e( 'Our partners' ); ?>
-		</h4>
+		</span>
 		<div class="page__inner">
 			<div class="b-partner">
 			<?php
@@ -517,7 +517,7 @@
 			</div>
 		</div>             
 	</div>
-</section>
+</div>
 <!--/partners-->
 <?php
     get_footer();
