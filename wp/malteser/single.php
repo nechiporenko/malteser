@@ -15,12 +15,44 @@
 				</figure>
 				<div class="page__entry">
 					<?php the_content(); ?>
-				</div>				
+				</div>							
 				<?php
+					//post video
+					$video_url = get('post_video_youtube');					
+					if($video_url){
+						//get video id from youtube url
+						function getYouTubeId($url){
+							parse_str( parse_url( $url, PHP_URL_QUERY ), $my_array_of_vars );
+							return $my_array_of_vars['v'];
+						}
+						$youtube_id = getYouTubeId($video_url);
+						if($youtube_id){
+				?>
+				<!--youtube video-->
+				<div class="b-meta">
+					<span class="b-meta__title">
+						<i class="icon-video"></i>
+						<?php pll_e( 'Video: ' ); ?>
+					</span>
+				</div>
+				<div class="g-video-wrap">
+					<iframe src="https://www.youtube.com/embed/<?php echo $youtube_id; ?>?rel=0&amp;showinfo=0;"></iframe>
+				</div>
+				<!--/youtube video-->
+				<?php
+						} //end if
+					} //end if
+					//post gallery
 					$photo_count = get_count_field('post_gallery_photo');
-					if($photo_count > 0){
+					if($photo_count > 1){
 				?>
 				<!--post gallery-->
+				<div class="b-meta">
+					<span class="b-meta__title">
+						<i class="icon-pictures"></i>
+						<?php pll_e( 'Photos: ' ); ?>
+					</span>
+				</div>
 				<ul class="b-photo js-gallery">
 				<?php
 					$photos = get_order_field('post_gallery_photo');
@@ -36,7 +68,7 @@
 						</a>
 					</li>
 				<?php
-					}
+						} //end foreach
 				?>
 				</ul>
 				<!--/post gallery-->

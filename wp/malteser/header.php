@@ -5,8 +5,8 @@
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.min.css?ver=0.0.7">
-    <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.min.css?ver=0.0.8">
+    <?php /*<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">*/?>
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->

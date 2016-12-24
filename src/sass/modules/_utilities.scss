@@ -10,8 +10,9 @@
 .g-video-wrap {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
 	height: 0;
+    margin-bottom:$project-line-height;
+    @extend .g-shadow-hover;
 }
 .g-video-wrap iframe {
 	position: absolute;

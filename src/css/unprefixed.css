@@ -434,7 +434,7 @@ hr {
 }
 
 /* Transitions */
-.g-transition, a, button, .g-shadow-hover, .b-panel--has-icon, .b-panel--alt, .b-gallery__inner, .b-news__thumb, .b-photo__link, .b-taglist a, .g-btn:before, .g-input, .h-search__input,
+.g-transition, a, button, .g-shadow-hover, .g-video-wrap, .b-panel--has-icon, .b-panel--alt, .b-gallery__inner, .b-news__thumb, .b-photo__link, .b-taglist a, .g-btn:before, .g-input, .h-search__input,
 .g-select,
 .g-textarea, .h-action__icon, .b-header__mtoggl [class^="icon-"], .b-header__mtoggl [class*=" icon-"], .h-menu__sub-menu, .m-menu__toggle [class^="icon-"], .m-menu__toggle [class*=" icon-"], .b-panel__icon:before, .b-panel__svg .st1, .b-panel__title, .b-panel__thumb:after, .b-partner__img, .b-gallery__link:after, .b-photo__link:after, .b-gallery__inner:after, .b-gallery__img, .b-gallery__entry, .b-news__thumblink:before, .b-news__thumblink:after, .b-news__img, .b-news__more:before, .b-side-news__more:before, .b-photo__link:before, .bx-controls-direction a, .sl-wrapper button {
   transition-duration: .2s;
@@ -469,8 +469,8 @@ a, button {
   position: relative;
   padding-bottom: 56.25%;
   /* 16:9 */
-  padding-top: 25px;
   height: 0;
+  margin-bottom: 18px;
 }
 
 .g-video-wrap iframe {
@@ -482,11 +482,11 @@ a, button {
   border: none;
 }
 
-.g-shadow-hover, .b-panel--has-icon, .b-panel--alt, .b-gallery__inner, .b-news__thumb, .b-photo__link, .b-taglist a {
+.g-shadow-hover, .g-video-wrap, .b-panel--has-icon, .b-panel--alt, .b-gallery__inner, .b-news__thumb, .b-photo__link, .b-taglist a {
   transition-property: box-shadow, border-color;
 }
 
-.g-shadow-hover:hover, .b-panel--has-icon:hover, .b-panel--alt:hover, .b-gallery__inner:hover, .b-news__thumb:hover, .b-photo__link:hover, .b-taglist a:hover {
+.g-shadow-hover:hover, .g-video-wrap:hover, .b-panel--has-icon:hover, .b-panel--alt:hover, .b-gallery__inner:hover, .b-news__thumb:hover, .b-photo__link:hover, .b-taglist a:hover {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -2549,6 +2549,7 @@ a.b-panel__subtitle:hover {
 
 .b-meta__title [class^="icon-"], .b-meta__title [class*=" icon-"] {
   color: #da251c;
+  vertical-align: baseline;
 }
 
 .b-meta__list {
