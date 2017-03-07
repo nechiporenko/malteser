@@ -104,9 +104,37 @@
     <!--/FOOTER-->
 
     <!--scripts-->
+    <script>
+		(function () {
+            var css = document.createElement("link");
+            css.setAttribute("rel", "stylesheet");
+            css.setAttribute("href", "<?php bloginfo('template_directory'); ?>/css/app.main.min.css");
+            document.getElementsByTagName("head")[0].appendChild(css);
+        })();
+    </script>
+    <noscript>
+        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.main.min.css" />
+    </noscript>
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Open Sans:400,400i,600,700:cyrillic']
+            },
+            active: function () {
+                sessionStorage.font_GOS = true;
+            }
+        };
+
+        (function (d) {
+            var wf = d.createElement('script'), s = d.scripts[0];
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+            wf.async = true;
+            s.parentNode.insertBefore(wf, s);
+        })(document);
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="<?php bloginfo('template_directory'); ?>/js/app.min.js?ver=0.0.1"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/app.min.js?ver=0.0.4"></script>
     <?php
 		if( is_page_template('tmpl-contacts.php') ){
 	?>
@@ -122,6 +150,22 @@
 	?>
 	<script src='https://www.google.com/recaptcha/api.js?hl=uk' async defer></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/orderForm.min.js"></script>
+	<?php
+		}
+    ?>
+    
+    <?php
+		if( is_single() ){
+	?>
+	<!-- AddToAny BEGIN -->
+	<script>
+		var a2a_config = a2a_config || {};
+		a2a_config.onclick = 1;
+		a2a_config.locale = "uk";
+		a2a_config.num_services = 4;
+	</script>
+	<script async src="https://static.addtoany.com/menu/page.js"></script>
+	<!-- AddToAny END -->
 	<?php
 		}
     ?>

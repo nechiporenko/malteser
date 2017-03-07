@@ -69,7 +69,9 @@
 							<?php echo $phone; ?>
 						</span>
 						<p>
-							<span itemprop="telephone">+380 50 224-24-14</span>
+							<span itemprop="telephone">+380 44 227-37-28</span>
+							<br />
+							+380 96 699-99-11
 						</p>
 					</div>
 					<div class="g-col g-col--one-third">

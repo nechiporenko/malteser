@@ -106,7 +106,7 @@ module.exports = function(grunt) {
 			dynamic: {
 				png:{
 					options: {
-						optimizationLevel: 4
+						optimizationLevel: 6
 				  }
 				},
 				jpg:{

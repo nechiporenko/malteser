@@ -13,10 +13,17 @@
 //typography
 @import "modules/typography";
 
-//page parts
+//header
 @import "partials/header";
-@import "partials/menu";
+
+//top page
+@import "partials/menu/desktop-menu";
+@import "partials/page/_breadcrumbs.scss";
+@import "partials/page/_slider.scss";
+
+//other parts
 @import "partials/page";
+@import "partials/menu";
 @import "partials/sidebar";
 @import "partials/footer";
 

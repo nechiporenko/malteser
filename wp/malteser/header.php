@@ -5,8 +5,15 @@
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.min.css?ver=0.0.8">
-    <?php /*<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">*/?>
+    <script>
+        (function () {
+            if (sessionStorage.font_GOS) {
+                document.documentElement.classList.add('wf-active');
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.head.min.css?ver=0.0.1">
+    <?php /* <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.min.css?ver=0.1.9"> */?>
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
@@ -28,14 +35,22 @@
 					break;
 				}
 			}
-		}                                               
-        ?>" />
+		}           
+	?>" />	
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_directory'); ?>/img/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="<?php bloginfo('template_directory'); ?>/img/favicons/manifest.json">
+	<link rel="mask-icon" href="<?php bloginfo('template_directory'); ?>/img/favicons/safari-pinned-tab.svg">
+	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/img/favicons/favicon.ico">
+	<meta name="msapplication-config" content="<?php bloginfo('template_directory'); ?>/img/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
     <?php
 		wp_deregister_script( 'jquery' );
         wp_head();
     ?>
 </head>
-<body class="page">
+<body class="page <?php if( is_front_page() ) { echo 'page--home'; } ?>">
     <!--HEADER-->
     <header class="b-header">
         <div class="b-header__top">
@@ -47,10 +62,14 @@
 					foreach ($langs as $lang){
 				?>
 					<li class="h-lang__item <?php if ($lang['current_lang']) { echo 'h-lang__item--active'; } ?>">
-						<a href="<?php echo $lang['url']; ?>" class="h-lang__link"><?php echo $lang['slug']; ?></a>
+					<?php if( $lang['current_lang'] ) { ?>
+						<span class="h-lang__link"><?php echo $lang['slug']; ?></span>
+					<?php } else { ?>
+						<a href="<?php echo $lang['url']; ?>" class="h-lang__link" hreflang="<?php echo $lang['slug']; ?>"><?php echo $lang['slug']; ?></a>
+					<?php } ?>
 					</li>
 				<?php
-					}
+					} //end foreach
                 ?>
                 </ul>
                 <!--/lang switcher-->
@@ -60,11 +79,11 @@
                 <!--header action list-->
                 <ul class="h-action">
                     <li class="h-action__item">
-                        <a href="tel:+380502242414" class="h-action__link">
+                        <a href="tel:+380442273728" class="h-action__link">
                             <span class="h-action__icon">
                                 <i class="icon-phone"></i>
                             </span>
-                            (050) 224-24-14
+                            (044) 227-37-28
                         </a>
                     </li>
                     <li class="h-action__item">
@@ -75,21 +94,38 @@
 							$order_link = '/pl/zamowienie-uslugi/';
 							$help_link = '/pl/pomoz-nam/';
 						}
+						
+						if ( is_page_template('tmpl-order.php') ) {
 					?>
-                        <a href="<?php echo $order_link; ?>" class="h-action__link">
+						<span class="h-action__link h-action__link--current">
+					<?php } else { ?>
+						<a href="<?php echo $order_link; ?>" class="h-action__link">
+					<?php } ?>
                             <span class="h-action__icon">
                                 <i class="icon-heart"></i>
                             </span>
                             <?php pll_e( 'Order services' ); ?>
-                        </a>
+                    <?php if ( is_page_template('tmpl-order.php') ) { ?>
+						</span>
+					<?php } else { ?>
+						</a>
+					<?php } ?>
                     </li>
                     <li class="h-action__item">
+					<?php if ( is_page_template('tmpl-help.php') ) { ?>
+						<span class="h-action__link h-action__link--current">
+					<?php } else { ?>
                         <a href="<?php echo $help_link; ?>" class="h-action__link">
+                    <?php } ?>
                             <span class="h-action__icon">
                                 <i class="icon-donate"></i>
                             </span>
                             <?php pll_e( 'Help Us' ); ?>
-                        </a>
+                    <?php if ( is_page_template('tmpl-help.php') ) { ?>
+						</span>
+					<?php } else { ?>
+						</a>
+					<?php } ?>
                     </li>
                 </ul>
                 <!--/header action list-->

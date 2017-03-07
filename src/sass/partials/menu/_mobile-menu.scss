@@ -47,14 +47,17 @@
     position:relative;
 
     &.has-menu{
-        & > a{
+        & > a,
+        & > span{
             padding-right:40px;
         }
     }
 }
 
 .m-menu__link,
-.m-menu__sub-menu__link{
+.m-menu__sub-menu__link,
+.m-menu__item > span,
+.m-menu__sub-menu__item > span{
     display:block;
     padding:11px 12px;
     border-top:1px solid #808080;
@@ -63,20 +66,43 @@
     line-height:1.15;
     font-size:rem(14px);
     text-decoration:none;
+    backface-visibility:hidden;
+}
 
-    .m-menu__item--active > &{
+.m-menu__link,
+.m-menu__item > span{
+    font-weight:600;
+}
+
+.m-menu__item--active > a,
+.m-menu__item--active > span,
+.m-menu__sub-menu__item--active > a,
+.m-menu__sub-menu__item--active > span,
+.m-menu__item--parent--active > a,
+.m-menu__item--parent--active > span,
+.m-menu__item--ancestor--active > a,
+.m-menu__item--ancestor--active > span {
+    color:$primary;
+}
+
+.m-menu__link,
+.m-menu__sub-menu__link{
+    &:active,
+    &:focus{
         color:$primary;
     }
 }
 
-.m-menu__link{
+.m-menu__link,
+.m-menu__item > span{
     text-transform:uppercase;
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
 }
 
-.m-menu__sub-menu__link{
+.m-menu__sub-menu__link,
+.m-menu__sub-menu__item > span{
     padding-left:20px;
 }
 

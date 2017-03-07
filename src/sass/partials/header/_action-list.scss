@@ -43,6 +43,15 @@
         }
     }
 }
+
+.h-action__link--current{
+    color:$primary;
+    .h-action__icon{
+        color:$primary;
+        background:#fff;
+    }
+}
+
 .h-action__icon{
     float:left;
     margin-right:5px;

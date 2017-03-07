@@ -6,8 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
-    <link rel="stylesheet" href="css/app.min.css">
+    <script>
+        (function () {
+            if (sessionStorage.font_GOS) {
+                document.documentElement.classList.add('wf-active');
+            }
+        })();
+    </script>
+    <!--<link rel="stylesheet" href="css/app.min.css">-->
+    <link rel="stylesheet" href="css/app.head.min.css" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
 </head>
 <body class="page">
     <!--HEADER-->
@@ -372,7 +381,7 @@
                         <a href="#" rel="nofollow" target="_blank" class="f-social__link"><i class="icon-facebook"></i></a>
                     </li>
                     <li class="f-social__item">
-                        <a href="#" rel="nofollow" target="_blank" class="f-social__link"><i class="icon-twiter"></i></a>
+                        <a href="#" rel="nofollow" target="_blank" class="f-social__link"><i class="icon-twitter"></i></a>
                     </li>
                     <li class="f-social__item">
                         <a href="#" rel="nofollow" target="_blank" class="f-social__link"><i class="icon-video"></i></a>
@@ -393,6 +402,34 @@
     <!--/FOOTER-->
 
     <!--scripts-->
+    <script>
+        (function () {
+            var css = document.createElement('link');
+            css.setAttribute('rel', 'stylesheet');
+            css.setAttribute('href', 'css/app.main.min.css');
+            document.getElementsByTagName("head")[0].appendChild(css);
+        })();
+    </script>
+    <noscript>
+        <link rel="stylesheet" href="css/app.main.min.css" />
+    </noscript>
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Open Sans:400,400i,600,700:cyrillic']
+            },
+            active: function () {
+                sessionStorage.font_GOS = true;
+            }
+        };
+
+        (function (d) {
+            var wf = d.createElement('script'), s = d.scripts[0];
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+            wf.async = true;
+            s.parentNode.insertBefore(wf, s);
+        })(document);
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/app.min.js"></script>

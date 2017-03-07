@@ -11,7 +11,7 @@ class walker_texas_ranger extends Walker_Nav_Menu {
         $this->item_css_class_suffixes = array(
             'item'                      => '__item',  
             'parent_item'               => '__item--parent',
-            'active_item'               => '__item--active',
+            'active_item'               => '__item--active current',
             'parent_of_active_item'     => '__item--parent--active',
             'ancestor_of_active_item'   => '__item--ancestor--active',
             'sub_menu'                  => '__sub-menu',

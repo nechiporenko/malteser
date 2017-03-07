@@ -12,16 +12,19 @@
 			get_template_part( 'template-parts/content', 'breadcrumbs' );
 		?>
 		<div class="g-row">
-			<section class="g-col g-col--two-thirds page__entry">
-				<?php
+			<section class="g-col g-col--two-thirds">
+				<div class="page__entry">
+					<?php
 					if ( have_posts() ) :  while ( have_posts() ) : the_post();
-				?>
-				<h1 class="g-title"><?php the_title(); ?></h1>
-				<?php the_content(); ?>
-				<?php
-					endwhile;
-					endif;
-				?>
+					?>
+					<h1 class="g-title"><?php the_title(); ?></h1>
+					<?php the_content(); ?>
+					<?php
+						endwhile;
+						endif;
+					?>
+				</div>
+				
 				<?php get_template_part( 'template-parts/form', 'order' ); ?>
 			</section>
 			<?php get_sidebar(); ?>

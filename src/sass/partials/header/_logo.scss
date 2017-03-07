@@ -30,8 +30,11 @@
 .h-logo__entry{
     padding:4px 0;
     font-size:rem(15px);
-    font-weight:600;
     line-height:1.2;
+
+    .wf-active &{
+      font-weight:600;
+    }
 }
 
 .h-logo__name--xl{

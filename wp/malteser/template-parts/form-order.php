@@ -28,7 +28,7 @@
 		</div>
 		<div class="g-col g-col--one-half">
 			<div class="g-fieldset">
-				<label class="g-label"><?php pll_e( 'Your phone' ); ?></label>
+				<label class="g-label"><?php pll_e( 'Your phone' ); ?>*</label>
 				<input type="text" class="g-input js-validate js-validate--phone" placeholder="Щоб ми могли швидше відповісти Вам" name="of_phone" id="of_phone" />
 				<span class="g-fieldset__msg">Вкажіть коректний номер!</span>
 			</div>

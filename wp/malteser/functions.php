@@ -71,31 +71,20 @@ add_image_size('img-xl',1200,900,true);
 /* start remove homeurl */
 function removeHomeUrl($input) {
         $mass = explode("/", $input);
-        $del_url = $mass[0]."//".$mass[2];
-  return str_replace( $del_url, "", $input );
+    $del_url = $mass[0]."//".$mass[2];
+    return str_replace( $del_url, "", $input );
 }
-add_filter('plugins_url', 'removeHomeUrl');
+add_filter( 'plugins_url', 'removeHomeUrl' );
 add_filter( 'the_permalink', 'removeHomeUrl' );
-add_filter('template_directory_uri', 'removeHomeUrl');
-add_filter('bloginfo_url', 'removeHomeUrl');
-add_filter('script_loader_src', 'removeHomeUrl');
-add_filter('style_loader_src', 'removeHomeUrl');
-function relative_nav_permalinks($input) {
-    $items = explode("<li", $input);
-    $items_final = "";
-    foreach($items as $item) {
-        if ($item != '') {
-            $item = '<li'.$item;
-            preg_match('/href="([^"]+)"/', $item, $src);
-            $src = $src[1];
-            $mass = explode("/", $src);
-            $del_url = $mass[0]."//".$mass[2];
-            $items_final .= str_replace( $del_url, "", $item );
-        }
-    }
-    return $items_final;
-}
-add_filter( "wp_nav_menu_items", 'relative_nav_permalinks' );
+add_filter( 'template_directory_uri', 'removeHomeUrl' );
+add_filter( 'bloginfo_url', 'removeHomeUrl' );
+add_filter( 'script_loader_src', 'removeHomeUrl' );
+add_filter( 'style_loader_src', 'removeHomeUrl' );
+add_filter( 'category_link', 'removeHomeUrl' );
+add_filter( 'page_link', 'removeHomeUrl' );
+add_filter( 'post_link', 'removeHomeUrl' );
+add_filter( 'term_link', 'removeHomeUrl' );
+add_filter( 'tag_link', 'removeHomeUrl' );
 function attachment_image($attrs) {
     $url_sectors = preg_split('/\//', $attrs['src']);
     unset($url_sectors[0]);
@@ -105,18 +94,22 @@ function attachment_image($attrs) {
     return $attrs;
 }
 add_filter('wp_get_attachment_image_attributes', 'attachment_image');
+add_filter('wp_get_attachment_image_attributes', function($attr) {
+        if (isset($attr['sizes'])) unset($attr['sizes']);
+        if (isset($attr['srcset'])) unset($attr['srcset']);
+        return $attr;
+}, PHP_INT_MAX);
+
+add_filter('wp_calculate_image_srcset_meta', '__return_null' );
+add_filter('wp_calculate_image_sizes', '__return_false',  99 );
+remove_filter('the_content', 'wp_make_content_images_responsive' );
+add_filter('wp_get_attachment_image_attributes', 'unset_attach_srcset_attr', 99 );
+function unset_attach_srcset_attr( $attr ){
+        foreach( array('sizes','srcset') as $key )
+                if( isset($attr[ $key ]) )    unset($attr[ $key ]);
+        return $attr;
+}
 /* end remove homeurl */
-
-/* Убираем атрибут srcset у картинок */
-add_filter( 'wp_get_attachment_image_attributes', function( $attr )
-{
-    if( isset( $attr['srcset'] ) )
-        unset( $attr['srcset'] );
-
-    return $attr;
-
- }, PHP_INT_MAX );
-add_filter( 'wp_calculate_image_srcset', '__return_false', PHP_INT_MAX );
 
 /* Убираем width, height у картинок */
 add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
@@ -124,9 +117,34 @@ function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
     $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
     return $html;
 }
+//--------------------------Заменим активный элемент меню на span------------------------------------------------------------------------------------//
+add_filter( "wp_nav_menu_items", 'currentitem', 99 );
+function currentitem($items) {
+    $elements = explode( '<li', $items );
+    //var_dump($elements);
+    $newmenu = array();
+    foreach($elements as $element) {
+        $element = '<li'.$element;
+        $needle = 'current';
+        $pos = strripos($element, $needle);
+        if ($pos === false) {
+            $newmenu[] = $element;
+        } else {
+            $element = preg_replace("!<a (.*?)>(.*?)</a>!si","<span>\\2</span>", $element);
+            $newmenu[] = $element;
+        }
+    }
+    $fruit = array_shift($newmenu);
+    $newitems = '';
+    foreach($newmenu as $item) {
+        $newitems .= $item;
+    }
+    return $newitems;
+}
 
+//--------------------------Обрезка текста (excerpt)------------------------------------------------------------------------------------//
 /**
- * Обрезка текста (excerpt). Шоткоды вырезаются. Минимальное значение maxchar может быть 22.
+ * Шоткоды вырезаются. Минимальное значение maxchar может быть 22.
  * version 2.2
  * 
  * @param  массив/строка $args аргументы. Смотрите переменную $default.

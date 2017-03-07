@@ -1,6 +1,6 @@
 <li class="b-news__item">
 	<article class="b-news__excerpt">
-		<figure class="b-news__thumb">
+		<figure class="b-news__thumb" style="position:relative;">
 			<a href="<?php the_permalink(); ?>" class="b-news__thumblink">
 				<?php the_post_thumbnail('gallery-img', 'class=b-news__img'); ?>				
 			</a>

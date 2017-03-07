@@ -15,7 +15,31 @@
 				</figure>
 				<div class="page__entry">
 					<?php the_content(); ?>
-				</div>							
+				</div>
+				
+				<div class="b-meta">
+					<span class="b-meta__title">
+						<i class="icon-share"></i>
+						<?php pll_e( 'Share this' ); ?>
+					</span>
+					<!-- AddToAny BEGIN -->
+					<div class="a2a_kit b-share">
+						<a class="a2a_button_facebook b-share__btn">
+							<i class="icon-facebook"></i>
+						</a>
+						<a class="a2a_button_twitter b-share__btn">
+							<i class="icon-twitter"></i>
+						</a>
+						<a class="a2a_button_vk b-share__btn">
+							<i class="icon-vk"></i>
+						</a>
+						<a class="a2a_button_google_plus b-share__btn">
+							<i class="icon-gplus"></i>
+						</a>
+					</div>
+					<!-- AddToAny END -->
+				</div>
+											
 				<?php
 					//post video
 					$video_url = get('post_video_youtube');					

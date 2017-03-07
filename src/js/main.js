@@ -51,6 +51,16 @@ jQuery(document).ready(function ($) {
                 offset: -1000
             });
 
+            page2 = new Waypoint({//когда домотали до конца страницы и скроллим вверх - покажем хидер
+                element: $('.page__content')[0],
+                handler: function (direction) {
+                    if (direction === 'up') {
+                        $header.removeClass('hidden');
+                    }
+                },
+                offset: 'bottom-in-view'
+            });
+
             isStick = true;
         };
 
@@ -155,6 +165,7 @@ jQuery(document).ready(function ($) {
         }
 
         method.init = function () {
+            //добавим заголовок меню и ссылку на главную страницу
             var labelText,
                 linkHref,
                 linkText,
@@ -176,7 +187,13 @@ jQuery(document).ready(function ($) {
                     break;
             }
 
-            $menu.find('li').filter(':first').before('<li class="m-menu__item"><label class="m-menu__label">'+ labelText +'</label></li><li class="m-menu__item"><a href="'+ linkHref +'" class="m-menu__link">'+ linkText +'</a></li>');
+            //на главной странице заменим линк на нее на спан (остальные пункты меню выведем динамически)
+            var homeItem = '<a href="' + linkHref + '" class="m-menu__link">' + linkText + '</a>';
+            if ($body.hasClass('page--home')) {
+                homeItem = '<span class="m-menu__link">' + linkText + '</span>';
+            }
+
+            $menu.find('li').filter(':first').before('<li class="m-menu__item"><label class="m-menu__label">' + labelText + '</label></li><li class="m-menu__item">' + homeItem + '</li>');
             $menu.find('li').has('ul').addClass('has-menu').append('<button type="button" class="m-menu__toggle"><i class="icon-down"></i></button>');
 
             $('.js-header').on('click', '.js-mtoggl', function () {//покажем - спрячем панель моб.меню

@@ -1,0 +1,21 @@
+﻿@import "../../modules/_base.scss";
+//add-to-any custom buttons
+.b-share{
+    margin-bottom:2*$project-line-height;
+    font-size:0;
+}
+
+.b-share__btn{
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:5px;
+    font-size:rem(32px);
+    text-decoration:none;
+    color:$primary-alt;
+
+    &:hover,
+    &:active{
+        color:$primary;
+        transform:translateY(-2px);
+    }
+}

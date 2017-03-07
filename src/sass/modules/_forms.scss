@@ -23,6 +23,7 @@ textarea {
     width:100%;
     margin-bottom: 2*$project-line-height;
     padding:6px 10px;
+    font-size:$project-font-size;
     background-color: #fff;
     border: 1px solid $border-color;
     border-radius:$border-radius;
@@ -72,6 +73,7 @@ textarea {
 
 .g-label{
     display: block;
+    font-size:$project-font-size;
     color:$primary-alt;
     font-weight:600;
     margin-bottom:$project-line-height/3;

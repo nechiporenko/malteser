@@ -11,16 +11,18 @@
     font-size:rem(15px);
 }
 
-.f-menu__link{
+.f-menu__link,
+.f-menu__item > span{
     color:#c9c9c9;
     text-decoration:none;
 
     &:hover{
         color:$primary;
     }
+}
 
-    .f-menu__item--active{
-        color:$primary;
-        cursor:default;
-    }
+.f-menu__item--active > a,
+.f-menu__item--active > span{
+    color:$primary;
+    cursor:default;
 }
