@@ -19,7 +19,7 @@
 				<?php
 					$home_link = '/';
 					if ( pll_current_language() != 'uk' ){ 
-						$home_link = '/pl/';
+						$home_link = '/pl/dom/';
 					}
                     if( is_front_page() ){
                 ?>
@@ -108,12 +108,12 @@
 		(function () {
             var css = document.createElement("link");
             css.setAttribute("rel", "stylesheet");
-            css.setAttribute("href", "<?php bloginfo('template_directory'); ?>/css/app.main.min.css");
+            css.setAttribute("href", "<?php bloginfo('template_directory'); ?>/css/app.main.min.css?ver=0.0.2");
             document.getElementsByTagName("head")[0].appendChild(css);
         })();
     </script>
     <noscript>
-        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.main.min.css" />
+        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.main.min.css?ver=0.0.2" />
     </noscript>
     <script>
         WebFontConfig = {

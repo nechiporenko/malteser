@@ -3,7 +3,7 @@
 	$home_link = '/';
 	if ( pll_current_language() != 'uk' ){ 
 		$home = 'Dom';
-		$home_link = '/pl/';
+		$home_link = '/pl/dom/';
 	}
 	if( !is_front_page() && !is_search() && !is_404() ){
 		echo '<ol class="b-crumb" itemscope itemtype="http://schema.org/BreadcrumbList">';
@@ -37,7 +37,7 @@
 			$post_id = get_the_ID();
 			$cat_id = get_the_category($post_id);
 			echo '<li class="b-crumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">';
-			echo '<a href="'.get_category_link($cat_id[0]->cat_ID).'" class="b-crumb__link" itemprop="item">';
+			echo '<a href="'. get_category_link($cat_id[0]->cat_ID).'" class="b-crumb__link" itemprop="item">';
 			echo '<span itemprop="name" class="b-crumb__inner">'.$cat_id[0]->cat_name.'</span>';
 			echo '<meta itemprop="position" content="2" />';
 			echo '</a>';

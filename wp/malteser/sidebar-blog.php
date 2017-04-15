@@ -11,7 +11,7 @@
 	<ul class="b-taglist">
 	<?php
 		foreach( $categories as $cat ){
-			$cat_link = get_category_link( $cat->term_id )
+			$cat_link = get_category_link( $cat->term_id );
 	?>
 		<li class="b-taglist__item">
 			<a href="<?php echo $cat_link; ?>"><?php echo $cat->name; ?></a>

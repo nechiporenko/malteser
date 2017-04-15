@@ -12,7 +12,7 @@
             }
         })();
     </script>
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.head.min.css?ver=0.0.1">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.head.min.css?ver=0.0.2">
     <?php /* <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.min.css?ver=0.1.9"> */?>
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -137,7 +137,7 @@
                 <?php
 					$home_link = '/';
 					if ( pll_current_language() != 'uk' ){ 
-						$home_link = '/pl/';
+						$home_link = '/pl/dom/';
 					}
                     if( is_front_page() ){
                 ?>

@@ -72,7 +72,12 @@ add_image_size('img-xl',1200,900,true);
 function removeHomeUrl($input) {
         $mass = explode("/", $input);
     $del_url = $mass[0]."//".$mass[2];
-    return str_replace( $del_url, "", $input );
+    $urlcorrect = $mass[0]."//".$_SERVER['HTTP_HOST'];
+    preg_match('/(cdnjs|googleapi)/', $del_url, $match);
+    if(!$match) {
+        $input = str_replace($del_url, $urlcorrect, $input);
+    }
+    return $input;
 }
 add_filter( 'plugins_url', 'removeHomeUrl' );
 add_filter( 'the_permalink', 'removeHomeUrl' );
@@ -110,13 +115,6 @@ function unset_attach_srcset_attr( $attr ){
         return $attr;
 }
 /* end remove homeurl */
-
-/* Убираем width, height у картинок */
-add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
-function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
-    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
-    return $html;
-}
 //--------------------------Заменим активный элемент меню на span------------------------------------------------------------------------------------//
 add_filter( "wp_nav_menu_items", 'currentitem', 99 );
 function currentitem($items) {
